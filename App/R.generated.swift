@@ -90,11 +90,12 @@ struct _R {
     }
   }
 
-  /// This `_R.storyboard` struct is generated, and contains static references to 2 storyboards.
+  /// This `_R.storyboard` struct is generated, and contains static references to 3 storyboards.
   struct storyboard {
     let bundle: Foundation.Bundle
     var launchScreen: launchScreen { .init(bundle: bundle) }
     var main: main { .init(bundle: bundle) }
+    var sub: sub { .init(bundle: bundle) }
 
     func launchScreen(bundle: Foundation.Bundle) -> launchScreen {
       .init(bundle: bundle)
@@ -102,9 +103,13 @@ struct _R {
     func main(bundle: Foundation.Bundle) -> main {
       .init(bundle: bundle)
     }
+    func sub(bundle: Foundation.Bundle) -> sub {
+      .init(bundle: bundle)
+    }
     func validate() throws {
       try self.launchScreen.validate()
       try self.main.validate()
+      try self.sub.validate()
     }
 
 
@@ -127,8 +132,24 @@ struct _R {
       let bundle: Foundation.Bundle
 
       let name = "Main"
-      func validate() throws {
 
+      var mainViewController: RswiftResources.StoryboardViewControllerIdentifier<MainViewController> { .init(identifier: "MainViewController", storyboard: name, bundle: bundle) }
+
+      func validate() throws {
+        if mainViewController() == nil { throw RswiftResources.ValidationError("[R.swift] ViewController with identifier 'mainViewController' could not be loaded from storyboard 'Main' as 'MainViewController'.") }
+      }
+    }
+
+    /// Storyboard `Sub`.
+    struct sub: RswiftResources.StoryboardReference {
+      let bundle: Foundation.Bundle
+
+      let name = "Sub"
+
+      var subViewController: RswiftResources.StoryboardViewControllerIdentifier<SubViewController> { .init(identifier: "SubViewController", storyboard: name, bundle: bundle) }
+
+      func validate() throws {
+        if subViewController() == nil { throw RswiftResources.ValidationError("[R.swift] ViewController with identifier 'subViewController' could not be loaded from storyboard 'Sub' as 'SubViewController'.") }
       }
     }
   }

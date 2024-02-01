@@ -8,11 +8,17 @@
 import UIKit
 
 final class MainViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         sampleAPI()
+    }
+
+    @IBAction func button(_ sender: Any) {
+        // storyboardにてStoryboardIDを設定、Use StoryboardIDにチェックをいれ、1度Buildすること
+        let vc = R.storyboard.sub.subViewController()!
+        self.present(vc, animated: true)
     }
 
     private func sampleAPI() {
