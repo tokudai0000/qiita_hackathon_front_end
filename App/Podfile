@@ -1,0 +1,28 @@
+# Uncomment the next line to define a global platform for your project
+minimum_deployment_target = 15.0
+platform :ios, minimum_deployment_target
+
+install! 'cocoapods', :warn_for_unused_master_specs_repo => false
+
+abstract_target 'All' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  inhibit_all_warnings!
+
+  # Pods for qiita_hackathon
+  pod 'R.swift' , '~> 7'
+  pod 'KeychainAccess' , '~> 4'
+
+  pod 'APIKit' , '~> 5'
+
+  target 'qiita_hackathon' do
+  end
+
+  target 'qiita_hackathonTests' do
+    inherit! :search_paths
+  end
+
+  target 'qiita_hackathonUITests' do
+  end
+
+end
