@@ -179,18 +179,18 @@
 		1AD8B3942B6B78E300C38E9D /* qiita_hackathon */ = {
 			isa = PBXGroup;
 			children = (
-				1AF4AEFA2B6BAAEB00B3F725 /* AkidonComponents */,
-				1AF4AEF92B6BAAD600B3F725 /* API */,
-				1A35DDAD2B6B9FE3008A2536 /* Entity */,
-				1AD8B3E52B6B86E600C38E9D /* Module */,
-				1AD8B3E42B6B86DD00C38E9D /* Repository */,
-				1AD8B3E32B6B86CC00C38E9D /* Common */,
 				1AD8B3E12B6B866500C38E9D /* R.generated.swift */,
 				1AD8B3952B6B78E300C38E9D /* AppDelegate.swift */,
 				1AD8B3972B6B78E300C38E9D /* SceneDelegate.swift */,
 				1AD8B39E2B6B78E500C38E9D /* Assets.xcassets */,
 				1AD8B3A02B6B78E500C38E9D /* LaunchScreen.storyboard */,
 				1AD8B3A32B6B78E500C38E9D /* Info.plist */,
+				1AF4AEFA2B6BAAEB00B3F725 /* AkidonComponents */,
+				1AF4AEF92B6BAAD600B3F725 /* API */,
+				1AD8B3E32B6B86CC00C38E9D /* Common */,
+				1A35DDAD2B6B9FE3008A2536 /* Entity */,
+				1AD8B3E52B6B86E600C38E9D /* Module */,
+				1AD8B3E42B6B86DD00C38E9D /* Repository */,
 			);
 			path = qiita_hackathon;
 			sourceTree = "<group>";
