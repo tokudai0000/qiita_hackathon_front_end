@@ -1,28 +1,24 @@
 PODS:
-  - Alamofire (4.9.1)
+  - APIKit (5.4.0)
   - KeychainAccess (4.2.2)
   - R.swift (7.3.2)
-  - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
-  - Alamofire (~> 4)
+  - APIKit (~> 5)
   - KeychainAccess (~> 4)
   - R.swift (~> 7)
-  - SwiftyJSON (~> 5)
 
 SPEC REPOS:
   trunk:
-    - Alamofire
+    - APIKit
     - KeychainAccess
     - R.swift
-    - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  APIKit: 0680e86d2e8abd5bc42e64963f5f89d209eb9271
   KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
   R.swift: 0af0d882f49f03711415cb4e5215daa977d8a480
-  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 6e61188c89d007ee881d28734d98c260cc1cffce
+PODFILE CHECKSUM: f5463a45652427a118175d5646cd928cc0387547
 
 COCOAPODS: 1.14.3
