@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1A30EA3B2B6B911E0095B3C8 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A30EA3A2B6B911E0095B3C8 /* MainViewModel.swift */; };
+		1A30EA452B6B96700095B3C8 /* API.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A30EA442B6B96700095B3C8 /* API.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A30EA482B6B96700095B3C8 /* API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A30EA422B6B966F0095B3C8 /* API.framework */; };
+		1A30EA492B6B96700095B3C8 /* API.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A30EA422B6B966F0095B3C8 /* API.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1A30EA4E2B6B968D0095B3C8 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A30EA4D2B6B968D0095B3C8 /* APIManager.swift */; };
+		1A35DDA82B6B9B6D008A2536 /* AkidonComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD8B3CE2B6B827D00C38E9D /* AkidonComponents.framework */; platformFilter = ios; };
+		1A35DDA92B6B9B6D008A2536 /* AkidonComponents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD8B3CE2B6B827D00C38E9D /* AkidonComponents.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1AD8B3962B6B78E300C38E9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8B3952B6B78E300C38E9D /* AppDelegate.swift */; };
 		1AD8B3982B6B78E300C38E9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8B3972B6B78E300C38E9D /* SceneDelegate.swift */; };
 		1AD8B39A2B6B78E300C38E9D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8B3992B6B78E300C38E9D /* MainViewController.swift */; };
@@ -24,12 +30,27 @@
 		1AD8B3DC2B6B854900C38E9D /* DateFormatter+Exetnsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8B3DB2B6B854900C38E9D /* DateFormatter+Exetnsion.swift */; };
 		1AD8B3E02B6B859800C38E9D /* UIImageView+Exetnsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8B3DF2B6B859800C38E9D /* UIImageView+Exetnsion.swift */; };
 		1AD8B3E22B6B866500C38E9D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8B3E12B6B866500C38E9D /* R.generated.swift */; };
-		3C823F1A13CD624C3565CA6E /* Pods_qiita_hackathon_qiita_hackathonUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00477FB414F48A7A8B2E0D72 /* Pods_qiita_hackathon_qiita_hackathonUITests.framework */; };
-		FB4295B3C05A473EDFF3EB1A /* Pods_qiita_hackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6B61F0F3793EC13B3275AA5 /* Pods_qiita_hackathon.framework */; };
+		2FE6CA7E938EE5D87A0942C1 /* Pods_All_API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB23EAAD80825CC687AF4EC /* Pods_All_API.framework */; };
+		469B1CB90793352309DBE981 /* Pods_All_qiita_hackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 265090106D418D89CA353673 /* Pods_All_qiita_hackathon.framework */; };
+		A92CBF23A4F970838DD6FE0E /* Pods_All_qiita_hackathonUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA06B7B3D5259A88F962E55 /* Pods_All_qiita_hackathonUITests.framework */; };
 		FD0A27CF5F21C4C6F746DB30 /* Pods_qiita_hackathonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A82E8F8E84A8D2DD35C0D9F /* Pods_qiita_hackathonTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1A30EA462B6B96700095B3C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AD8B38A2B6B78E300C38E9D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A30EA412B6B966F0095B3C8;
+			remoteInfo = API;
+		};
+		1A35DDAA2B6B9B6D008A2536 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AD8B38A2B6B78E300C38E9D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AD8B3CD2B6B827D00C38E9D;
+			remoteInfo = AkidonComponents;
+		};
 		1AD8B3A92B6B78E600C38E9D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1AD8B38A2B6B78E300C38E9D /* Project object */;
@@ -54,6 +75,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		1A35DDAC2B6B9B6D008A2536 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1A35DDA92B6B9B6D008A2536 /* AkidonComponents.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1AD8B3D92B6B827D00C38E9D /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -61,6 +93,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				1AD8B3D52B6B827D00C38E9D /* AkidonComponents.framework in Embed Frameworks */,
+				1A30EA492B6B96700095B3C8 /* API.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,8 +101,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		00477FB414F48A7A8B2E0D72 /* Pods_qiita_hackathon_qiita_hackathonUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_qiita_hackathon_qiita_hackathonUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1340BA463C0928E797856E17 /* Pods-All-qiita_hackathonUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-All-qiita_hackathonUITests.debug.xcconfig"; path = "Target Support Files/Pods-All-qiita_hackathonUITests/Pods-All-qiita_hackathonUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1A30EA3A2B6B911E0095B3C8 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		1A30EA422B6B966F0095B3C8 /* API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A30EA442B6B96700095B3C8 /* API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
+		1A30EA4D2B6B968D0095B3C8 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		1AD8B3922B6B78E300C38E9D /* qiita_hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qiita_hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AD8B3952B6B78E300C38E9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AD8B3972B6B78E300C38E9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,23 +125,40 @@
 		1AD8B3DB2B6B854900C38E9D /* DateFormatter+Exetnsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Exetnsion.swift"; sourceTree = "<group>"; };
 		1AD8B3DF2B6B859800C38E9D /* UIImageView+Exetnsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Exetnsion.swift"; sourceTree = "<group>"; };
 		1AD8B3E12B6B866500C38E9D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		1BC84076576553A99D8F9723 /* Pods-All-API.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-All-API.debug.xcconfig"; path = "Target Support Files/Pods-All-API/Pods-All-API.debug.xcconfig"; sourceTree = "<group>"; };
+		265090106D418D89CA353673 /* Pods_All_qiita_hackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_All_qiita_hackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A82E8F8E84A8D2DD35C0D9F /* Pods_qiita_hackathonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_qiita_hackathonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E326AB5086D59D5E6B4DD1F /* Pods-All-qiita_hackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-All-qiita_hackathon.debug.xcconfig"; path = "Target Support Files/Pods-All-qiita_hackathon/Pods-All-qiita_hackathon.debug.xcconfig"; sourceTree = "<group>"; };
+		3AB23EAAD80825CC687AF4EC /* Pods_All_API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_All_API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F407E9FC8C545605640EDAA /* Pods-qiita_hackathonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qiita_hackathonTests.debug.xcconfig"; path = "Target Support Files/Pods-qiita_hackathonTests/Pods-qiita_hackathonTests.debug.xcconfig"; sourceTree = "<group>"; };
 		82718689DC8ED59D6E91311B /* Pods-qiita_hackathonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qiita_hackathonTests.release.xcconfig"; path = "Target Support Files/Pods-qiita_hackathonTests/Pods-qiita_hackathonTests.release.xcconfig"; sourceTree = "<group>"; };
 		8986658ABF059BCEF37D8A5C /* Pods-qiita_hackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qiita_hackathon.release.xcconfig"; path = "Target Support Files/Pods-qiita_hackathon/Pods-qiita_hackathon.release.xcconfig"; sourceTree = "<group>"; };
 		958F4C2BC89E7B7E704DB0D3 /* Pods-qiita_hackathon-qiita_hackathonUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qiita_hackathon-qiita_hackathonUITests.release.xcconfig"; path = "Target Support Files/Pods-qiita_hackathon-qiita_hackathonUITests/Pods-qiita_hackathon-qiita_hackathonUITests.release.xcconfig"; sourceTree = "<group>"; };
-		A6B61F0F3793EC13B3275AA5 /* Pods_qiita_hackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_qiita_hackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95CFF91AD32E07264F216D20 /* Pods-All-qiita_hackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-All-qiita_hackathon.release.xcconfig"; path = "Target Support Files/Pods-All-qiita_hackathon/Pods-All-qiita_hackathon.release.xcconfig"; sourceTree = "<group>"; };
+		BB8303A4DC5BB114EDD5481E /* Pods-All-qiita_hackathonUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-All-qiita_hackathonUITests.release.xcconfig"; path = "Target Support Files/Pods-All-qiita_hackathonUITests/Pods-All-qiita_hackathonUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C7CC43D8429D34762056DC59 /* Pods-qiita_hackathon-qiita_hackathonUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qiita_hackathon-qiita_hackathonUITests.debug.xcconfig"; path = "Target Support Files/Pods-qiita_hackathon-qiita_hackathonUITests/Pods-qiita_hackathon-qiita_hackathonUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CAC81FEEBEAC35152BC4A7C1 /* Pods-qiita_hackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qiita_hackathon.debug.xcconfig"; path = "Target Support Files/Pods-qiita_hackathon/Pods-qiita_hackathon.debug.xcconfig"; sourceTree = "<group>"; };
+		E2A10CDE9958567D6CC11A07 /* Pods-All-API.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-All-API.release.xcconfig"; path = "Target Support Files/Pods-All-API/Pods-All-API.release.xcconfig"; sourceTree = "<group>"; };
+		EEA06B7B3D5259A88F962E55 /* Pods_All_qiita_hackathonUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_All_qiita_hackathonUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1A30EA3F2B6B966F0095B3C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A35DDA82B6B9B6D008A2536 /* AkidonComponents.framework in Frameworks */,
+				2FE6CA7E938EE5D87A0942C1 /* Pods_All_API.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1AD8B38F2B6B78E300C38E9D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1AD8B3D42B6B827D00C38E9D /* AkidonComponents.framework in Frameworks */,
-				FB4295B3C05A473EDFF3EB1A /* Pods_qiita_hackathon.framework in Frameworks */,
+				1A30EA482B6B96700095B3C8 /* API.framework in Frameworks */,
+				469B1CB90793352309DBE981 /* Pods_All_qiita_hackathon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,7 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C823F1A13CD624C3565CA6E /* Pods_qiita_hackathon_qiita_hackathonUITests.framework in Frameworks */,
+				A92CBF23A4F970838DD6FE0E /* Pods_All_qiita_hackathonUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,10 +198,20 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		1A30EA432B6B96700095B3C8 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				1A30EA442B6B96700095B3C8 /* API.h */,
+				1A30EA4D2B6B968D0095B3C8 /* APIManager.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		1AD8B3892B6B78E300C38E9D = {
 			isa = PBXGroup;
 			children = (
 				1AD8B3CF2B6B827D00C38E9D /* AkidonComponents */,
+				1A30EA432B6B96700095B3C8 /* API */,
 				1AD8B3942B6B78E300C38E9D /* qiita_hackathon */,
 				1AD8B3AB2B6B78E600C38E9D /* qiita_hackathonTests */,
 				1AD8B3B52B6B78E600C38E9D /* qiita_hackathonUITests */,
@@ -165,6 +228,7 @@
 				1AD8B3A82B6B78E600C38E9D /* qiita_hackathonTests.xctest */,
 				1AD8B3B22B6B78E600C38E9D /* qiita_hackathonUITests.xctest */,
 				1AD8B3CE2B6B827D00C38E9D /* AkidonComponents.framework */,
+				1A30EA422B6B966F0095B3C8 /* API.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -238,9 +302,10 @@
 		5123EAEB37780DFBA95E9A7D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A6B61F0F3793EC13B3275AA5 /* Pods_qiita_hackathon.framework */,
-				00477FB414F48A7A8B2E0D72 /* Pods_qiita_hackathon_qiita_hackathonUITests.framework */,
 				2A82E8F8E84A8D2DD35C0D9F /* Pods_qiita_hackathonTests.framework */,
+				3AB23EAAD80825CC687AF4EC /* Pods_All_API.framework */,
+				265090106D418D89CA353673 /* Pods_All_qiita_hackathon.framework */,
+				EEA06B7B3D5259A88F962E55 /* Pods_All_qiita_hackathonUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -254,6 +319,12 @@
 				958F4C2BC89E7B7E704DB0D3 /* Pods-qiita_hackathon-qiita_hackathonUITests.release.xcconfig */,
 				5F407E9FC8C545605640EDAA /* Pods-qiita_hackathonTests.debug.xcconfig */,
 				82718689DC8ED59D6E91311B /* Pods-qiita_hackathonTests.release.xcconfig */,
+				1BC84076576553A99D8F9723 /* Pods-All-API.debug.xcconfig */,
+				E2A10CDE9958567D6CC11A07 /* Pods-All-API.release.xcconfig */,
+				2E326AB5086D59D5E6B4DD1F /* Pods-All-qiita_hackathon.debug.xcconfig */,
+				95CFF91AD32E07264F216D20 /* Pods-All-qiita_hackathon.release.xcconfig */,
+				1340BA463C0928E797856E17 /* Pods-All-qiita_hackathonUITests.debug.xcconfig */,
+				BB8303A4DC5BB114EDD5481E /* Pods-All-qiita_hackathonUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -261,6 +332,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		1A30EA3D2B6B966F0095B3C8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A30EA452B6B96700095B3C8 /* API.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1AD8B3C92B6B827D00C38E9D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -272,6 +351,27 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		1A30EA412B6B966F0095B3C8 /* API */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A30EA4A2B6B96710095B3C8 /* Build configuration list for PBXNativeTarget "API" */;
+			buildPhases = (
+				18208CC2C18D95D41FA3EAED /* [CP] Check Pods Manifest.lock */,
+				1A30EA3D2B6B966F0095B3C8 /* Headers */,
+				1A30EA3E2B6B966F0095B3C8 /* Sources */,
+				1A30EA3F2B6B966F0095B3C8 /* Frameworks */,
+				1A30EA402B6B966F0095B3C8 /* Resources */,
+				1A35DDAC2B6B9B6D008A2536 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A35DDAB2B6B9B6D008A2536 /* PBXTargetDependency */,
+			);
+			name = API;
+			productName = API;
+			productReference = 1A30EA422B6B966F0095B3C8 /* API.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		1AD8B3912B6B78E300C38E9D /* qiita_hackathon */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1AD8B3BC2B6B78E600C38E9D /* Build configuration list for PBXNativeTarget "qiita_hackathon" */;
@@ -288,6 +388,7 @@
 			);
 			dependencies = (
 				1AD8B3D32B6B827D00C38E9D /* PBXTargetDependency */,
+				1A30EA472B6B96700095B3C8 /* PBXTargetDependency */,
 			);
 			name = qiita_hackathon;
 			productName = qiita_hackathon;
@@ -361,6 +462,10 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					1A30EA412B6B966F0095B3C8 = {
+						CreatedOnToolsVersion = 15.0.1;
+						LastSwiftMigration = 1500;
+					};
 					1AD8B3912B6B78E300C38E9D = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
@@ -394,11 +499,19 @@
 				1AD8B3A72B6B78E600C38E9D /* qiita_hackathonTests */,
 				1AD8B3B12B6B78E600C38E9D /* qiita_hackathonUITests */,
 				1AD8B3CD2B6B827D00C38E9D /* AkidonComponents */,
+				1A30EA412B6B966F0095B3C8 /* API */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1A30EA402B6B966F0095B3C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1AD8B3902B6B78E300C38E9D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -433,6 +546,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		18208CC2C18D95D41FA3EAED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-All-API-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1AD8B3C52B6B7A1500C38E9D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -467,7 +602,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-qiita_hackathon-qiita_hackathonUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-All-qiita_hackathonUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -480,15 +615,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-qiita_hackathon-qiita_hackathonUITests/Pods-qiita_hackathon-qiita_hackathonUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-All-qiita_hackathonUITests/Pods-All-qiita_hackathonUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-qiita_hackathon-qiita_hackathonUITests/Pods-qiita_hackathon-qiita_hackathonUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-All-qiita_hackathonUITests/Pods-All-qiita_hackathonUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-qiita_hackathon-qiita_hackathonUITests/Pods-qiita_hackathon-qiita_hackathonUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-All-qiita_hackathonUITests/Pods-All-qiita_hackathonUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A364B36186B1CA4FA4299538 /* [CP] Check Pods Manifest.lock */ = {
@@ -506,7 +641,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-qiita_hackathon-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-All-qiita_hackathon-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -541,20 +676,28 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-qiita_hackathon/Pods-qiita_hackathon-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-All-qiita_hackathon/Pods-All-qiita_hackathon-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-qiita_hackathon/Pods-qiita_hackathon-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-All-qiita_hackathon/Pods-All-qiita_hackathon-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-qiita_hackathon/Pods-qiita_hackathon-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-All-qiita_hackathon/Pods-All-qiita_hackathon-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1A30EA3E2B6B966F0095B3C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A30EA4E2B6B968D0095B3C8 /* APIManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1AD8B38E2B6B78E300C38E9D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -597,6 +740,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1A30EA472B6B96700095B3C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A30EA412B6B966F0095B3C8 /* API */;
+			targetProxy = 1A30EA462B6B96700095B3C8 /* PBXContainerItemProxy */;
+		};
+		1A35DDAB2B6B9B6D008A2536 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 1AD8B3CD2B6B827D00C38E9D /* AkidonComponents */;
+			targetProxy = 1A35DDAA2B6B9B6D008A2536 /* PBXContainerItemProxy */;
+		};
 		1AD8B3AA2B6B78E600C38E9D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1AD8B3912B6B78E300C38E9D /* qiita_hackathon */;
@@ -634,6 +788,85 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1A30EA4B2B6B96710095B3C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BC84076576553A99D8F9723 /* Pods-All-API.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = XSC9AJPSP3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.akidon0000.qiita-hackathon.API";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1A30EA4C2B6B96710095B3C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2A10CDE9958567D6CC11A07 /* Pods-All-API.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = XSC9AJPSP3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.akidon0000.qiita-hackathon.API";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		1AD8B3BA2B6B78E600C38E9D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -755,7 +988,7 @@
 		};
 		1AD8B3BD2B6B78E600C38E9D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CAC81FEEBEAC35152BC4A7C1 /* Pods-qiita_hackathon.debug.xcconfig */;
+			baseConfigurationReference = 2E326AB5086D59D5E6B4DD1F /* Pods-All-qiita_hackathon.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -790,7 +1023,7 @@
 		};
 		1AD8B3BE2B6B78E600C38E9D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8986658ABF059BCEF37D8A5C /* Pods-qiita_hackathon.release.xcconfig */;
+			baseConfigurationReference = 95CFF91AD32E07264F216D20 /* Pods-All-qiita_hackathon.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -867,7 +1100,7 @@
 		};
 		1AD8B3C32B6B78E600C38E9D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C7CC43D8429D34762056DC59 /* Pods-qiita_hackathon-qiita_hackathonUITests.debug.xcconfig */;
+			baseConfigurationReference = 1340BA463C0928E797856E17 /* Pods-All-qiita_hackathonUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -886,7 +1119,7 @@
 		};
 		1AD8B3C42B6B78E600C38E9D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 958F4C2BC89E7B7E704DB0D3 /* Pods-qiita_hackathon-qiita_hackathonUITests.release.xcconfig */;
+			baseConfigurationReference = BB8303A4DC5BB114EDD5481E /* Pods-All-qiita_hackathonUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -980,6 +1213,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1A30EA4A2B6B96710095B3C8 /* Build configuration list for PBXNativeTarget "API" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A30EA4B2B6B96710095B3C8 /* Debug */,
+				1A30EA4C2B6B96710095B3C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1AD8B38D2B6B78E300C38E9D /* Build configuration list for PBXProject "qiita_hackathon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
