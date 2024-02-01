@@ -14,6 +14,7 @@
 		1A30EA4E2B6B968D0095B3C8 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A30EA4D2B6B968D0095B3C8 /* APIManager.swift */; };
 		1A35DDA82B6B9B6D008A2536 /* AkidonComponents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD8B3CE2B6B827D00C38E9D /* AkidonComponents.framework */; platformFilter = ios; };
 		1A35DDA92B6B9B6D008A2536 /* AkidonComponents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD8B3CE2B6B827D00C38E9D /* AkidonComponents.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1A35DDAF2B6BA047008A2536 /* PublicRelations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A35DDAE2B6BA047008A2536 /* PublicRelations.swift */; };
 		1AD8B3962B6B78E300C38E9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8B3952B6B78E300C38E9D /* AppDelegate.swift */; };
 		1AD8B3982B6B78E300C38E9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8B3972B6B78E300C38E9D /* SceneDelegate.swift */; };
 		1AD8B39A2B6B78E300C38E9D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8B3992B6B78E300C38E9D /* MainViewController.swift */; };
@@ -106,6 +107,7 @@
 		1A30EA422B6B966F0095B3C8 /* API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A30EA442B6B96700095B3C8 /* API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
 		1A30EA4D2B6B968D0095B3C8 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		1A35DDAE2B6BA047008A2536 /* PublicRelations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicRelations.swift; sourceTree = "<group>"; };
 		1AD8B3922B6B78E300C38E9D /* qiita_hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qiita_hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AD8B3952B6B78E300C38E9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AD8B3972B6B78E300C38E9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -207,6 +209,14 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		1A35DDAD2B6B9FE3008A2536 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				1A35DDAE2B6BA047008A2536 /* PublicRelations.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		1AD8B3892B6B78E300C38E9D = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +246,7 @@
 		1AD8B3942B6B78E300C38E9D /* qiita_hackathon */ = {
 			isa = PBXGroup;
 			children = (
+				1A35DDAD2B6B9FE3008A2536 /* Entity */,
 				1AD8B3E52B6B86E600C38E9D /* Module */,
 				1AD8B3E42B6B86DD00C38E9D /* Repository */,
 				1AD8B3E32B6B86CC00C38E9D /* Common */,
@@ -704,6 +715,7 @@
 			files = (
 				1A30EA3B2B6B911E0095B3C8 /* MainViewModel.swift in Sources */,
 				1AD8B39A2B6B78E300C38E9D /* MainViewController.swift in Sources */,
+				1A35DDAF2B6BA047008A2536 /* PublicRelations.swift in Sources */,
 				1AD8B3962B6B78E300C38E9D /* AppDelegate.swift in Sources */,
 				1AD8B3982B6B78E300C38E9D /* SceneDelegate.swift in Sources */,
 				1AD8B3E22B6B866500C38E9D /* R.generated.swift in Sources */,

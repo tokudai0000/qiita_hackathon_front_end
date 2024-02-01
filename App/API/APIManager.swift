@@ -68,10 +68,10 @@ extension ApiRequest {
     }
 }
 
-class ApiManager: NSObject {
+public class ApiManager: NSObject {
 
     // MARK: - Public value
-    static let singleton = ApiManager() // シングルトン・インタンス
+    public static let singleton = ApiManager() // シングルトン・インタンス
 
     // ネットワーク接続状態
     private var isConnected = false
@@ -81,7 +81,7 @@ class ApiManager: NSObject {
     let headers: HTTPHeaders = ["Content-Type": "application/json"]
 
     /// シングルトン・インスタンスの初期処理
-    private override init() {  //シングルトン保証// privateにすることにより他から初期化させない
+    public override init() {  //シングルトン保証// privateにすることにより他から初期化させない
         super.init()
 
         // ネットワーク接続状態のモニタリング
