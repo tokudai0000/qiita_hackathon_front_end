@@ -1,0 +1,24 @@
+PODS:
+  - APIKit (5.4.0)
+  - KeychainAccess (4.2.2)
+  - R.swift (7.3.2)
+
+DEPENDENCIES:
+  - APIKit (~> 5)
+  - KeychainAccess (~> 4)
+  - R.swift (~> 7)
+
+SPEC REPOS:
+  trunk:
+    - APIKit
+    - KeychainAccess
+    - R.swift
+
+SPEC CHECKSUMS:
+  APIKit: 0680e86d2e8abd5bc42e64963f5f89d209eb9271
+  KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
+  R.swift: 0af0d882f49f03711415cb4e5215daa977d8a480
+
+PODFILE CHECKSUM: 449f6779e1ae105cbaeec794fd47c95bfd0de177
+
+COCOAPODS: 1.14.3
