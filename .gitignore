@@ -1,4 +1,5 @@
 .generated.swift
+GoogleService-Info.plist
 
 # Xcode Patch
 *.xcodeproj/*
