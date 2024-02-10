@@ -95,14 +95,29 @@ final class StudyRoomViewController: UIViewController {
         }
     }
 
-    private func userJoinPostAPI() {
+    private func userJoinPostAPI(requestID: String) {
         let api = UserJoinPostAPI()
-        api.postUserJoin(id: "akidon00001") { result in // インスタンスを通してメソッドを呼び出す
+        api.postUserJoin(id: requestID) { result in // インスタンスを通してメソッドを呼び出す
             DispatchQueue.main.async {
                 switch result {
                 case .success(_):
                     // 受け取ったデータを更新する
-                    print("打刻しました:")
+                    print("requestIDを打刻しました 入室！")
+                case .failure(let error):
+                    print("エラーが発生しました: \(error)")
+                }
+            }
+        }
+    }
+
+    private func userLeavePostAPI(requestID: String) {
+        let api = UserLeavePostAPI()
+        api.postUserLeave(id: requestID) { result in // インスタンスを通してメソッドを呼び出す
+            DispatchQueue.main.async {
+                switch result {
+                case .success(_):
+                    // 受け取ったデータを更新する
+                    print("requestIDを打刻しました　退出！")
                 case .failure(let error):
                     print("エラーが発生しました: \(error)")
                 }
@@ -111,13 +126,15 @@ final class StudyRoomViewController: UIViewController {
     }
 
     @objc func buttonTapped(sender : Any) {
+        let userId = UserDataRepository().fetchUserData().id
         // isInRoom(部屋にいる状態)の時にボタンが押されると退出とみなす
         if isInRoom {
             // 退出処理(入室を受け付ける表示に変更する)
+            userLeavePostAPI(requestID: userId)
             accessButton.setTitle("入室", for:UIControl.State.normal)
             accessButton.backgroundColor = UIColor.systemPink
         } else {
-            userJoinPostAPI()
+            userJoinPostAPI(requestID: userId)
             accessButton.setTitle("退出", for:UIControl.State.normal)
             accessButton.backgroundColor = UIColor.systemBlue
 

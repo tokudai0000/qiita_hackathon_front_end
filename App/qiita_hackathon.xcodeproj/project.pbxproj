@@ -22,6 +22,7 @@
 		1A9A83382B78018F00DEE3F4 /* UserPostAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9A83372B78018F00DEE3F4 /* UserPostAPI.swift */; };
 		1A9A833A2B780DB400DEE3F4 /* UsersUpdateGetAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9A83392B780DB400DEE3F4 /* UsersUpdateGetAPI.swift */; };
 		1A9A833C2B7813E300DEE3F4 /* UserJoinPostAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9A833B2B7813E300DEE3F4 /* UserJoinPostAPI.swift */; };
+		1A9A833E2B78195D00DEE3F4 /* UserLeavePostAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9A833D2B78195D00DEE3F4 /* UserLeavePostAPI.swift */; };
 		1AB7870A2B7731F400D673E1 /* AccountDisplay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB787092B7731F400D673E1 /* AccountDisplay.storyboard */; };
 		1AB7870C2B77320300D673E1 /* AccountDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7870B2B77320200D673E1 /* AccountDisplayViewController.swift */; };
 		1AB7870F2B7733BA00D673E1 /* GridSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB7870E2B7733BA00D673E1 /* GridSelection.storyboard */; };
@@ -101,6 +102,7 @@
 		1A9A83372B78018F00DEE3F4 /* UserPostAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostAPI.swift; sourceTree = "<group>"; };
 		1A9A83392B780DB400DEE3F4 /* UsersUpdateGetAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersUpdateGetAPI.swift; sourceTree = "<group>"; };
 		1A9A833B2B7813E300DEE3F4 /* UserJoinPostAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserJoinPostAPI.swift; sourceTree = "<group>"; };
+		1A9A833D2B78195D00DEE3F4 /* UserLeavePostAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLeavePostAPI.swift; sourceTree = "<group>"; };
 		1AB787092B7731F400D673E1 /* AccountDisplay.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AccountDisplay.storyboard; sourceTree = "<group>"; };
 		1AB7870B2B77320200D673E1 /* AccountDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDisplayViewController.swift; sourceTree = "<group>"; };
 		1AB7870E2B7733BA00D673E1 /* GridSelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GridSelection.storyboard; sourceTree = "<group>"; };
@@ -347,6 +349,7 @@
 				1A9A83372B78018F00DEE3F4 /* UserPostAPI.swift */,
 				1A9A83392B780DB400DEE3F4 /* UsersUpdateGetAPI.swift */,
 				1A9A833B2B7813E300DEE3F4 /* UserJoinPostAPI.swift */,
+				1A9A833D2B78195D00DEE3F4 /* UserLeavePostAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -666,6 +669,7 @@
 				1AD8B3962B6B78E300C38E9D /* AppDelegate.swift in Sources */,
 				1AB7872D2B7782B000D673E1 /* Logger.swift in Sources */,
 				1AB7872A2B77732000D673E1 /* Exit.swift in Sources */,
+				1A9A833E2B78195D00DEE3F4 /* UserLeavePostAPI.swift in Sources */,
 				1AB787282B7772FE00D673E1 /* Entry.swift in Sources */,
 				1A9A83362B77F94E00DEE3F4 /* UserDataRepository.swift in Sources */,
 				1AB787112B7733CB00D673E1 /* GridSelectionViewController.swift in Sources */,
