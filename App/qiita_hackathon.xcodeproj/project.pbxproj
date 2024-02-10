@@ -24,7 +24,6 @@
 		1AD8B3AD2B6B78E600C38E9D /* qiita_hackathonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8B3AC2B6B78E600C38E9D /* qiita_hackathonTests.swift */; };
 		1AD8B3B72B6B78E600C38E9D /* qiita_hackathonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8B3B62B6B78E600C38E9D /* qiita_hackathonUITests.swift */; };
 		1AD8B3B92B6B78E600C38E9D /* qiita_hackathonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8B3B82B6B78E600C38E9D /* qiita_hackathonUITestsLaunchTests.swift */; };
-		1AD8B3E22B6B866500C38E9D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8B3E12B6B866500C38E9D /* R.generated.swift */; };
 		1AF4AEFC2B6BAEE600B3F725 /* SampleAdItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF4AEFB2B6BAEE600B3F725 /* SampleAdItem.swift */; };
 		469B1CB90793352309DBE981 /* Pods_All_qiita_hackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 265090106D418D89CA353673 /* Pods_All_qiita_hackathon.framework */; };
 		A92CBF23A4F970838DD6FE0E /* Pods_All_qiita_hackathonUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA06B7B3D5259A88F962E55 /* Pods_All_qiita_hackathonUITests.framework */; };
@@ -87,7 +86,6 @@
 		1AD8B3C72B6B80FA00C38E9D /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		1AD8B3DB2B6B854900C38E9D /* DateFormatter+Exetnsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Exetnsion.swift"; sourceTree = "<group>"; };
 		1AD8B3DF2B6B859800C38E9D /* UIImageView+Exetnsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Exetnsion.swift"; sourceTree = "<group>"; };
-		1AD8B3E12B6B866500C38E9D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		1AF4AEFB2B6BAEE600B3F725 /* SampleAdItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAdItem.swift; sourceTree = "<group>"; };
 		1BC84076576553A99D8F9723 /* Pods-All-API.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-All-API.debug.xcconfig"; path = "Target Support Files/Pods-All-API/Pods-All-API.debug.xcconfig"; sourceTree = "<group>"; };
 		265090106D418D89CA353673 /* Pods_All_qiita_hackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_All_qiita_hackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,7 +185,6 @@
 			children = (
 				1ABA1F502B6E3B9300D0BBA5 /* GoogleService-Info-Template.plist */,
 				1ABA1F512B6E3B9300D0BBA5 /* GoogleService-Info.plist */,
-				1AD8B3E12B6B866500C38E9D /* R.generated.swift */,
 				1AD8B3952B6B78E300C38E9D /* AppDelegate.swift */,
 				1AD8B3972B6B78E300C38E9D /* SceneDelegate.swift */,
 				1AD8B39E2B6B78E500C38E9D /* Assets.xcassets */,
@@ -569,7 +566,6 @@
 				1A1765E82B6BD04E002DD773 /* SampleKeychain.swift in Sources */,
 				1A1765EF2B6BD5BF002DD773 /* SubViewController.swift in Sources */,
 				1AD8B3982B6B78E300C38E9D /* SceneDelegate.swift in Sources */,
-				1AD8B3E22B6B866500C38E9D /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
