@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  StudyRoomViewController.swift
 //  qiita_hackathon
 //
 //  Created by Akihiro Matsuyama on 2024/02/01.
@@ -7,8 +7,8 @@
 
 import UIKit
 
-final class MainViewController: UIViewController {
-    
+final class StudyRoomViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
