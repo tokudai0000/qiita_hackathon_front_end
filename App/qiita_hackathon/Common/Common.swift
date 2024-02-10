@@ -28,5 +28,7 @@ class Common {
                                         ProgramLang(lang: 1, timeMinutes: 402)],
                                     snsLinks: [
                                         SnsLink(title: "GitHub", url: "https://github.com/akidon0000"),
-                                        SnsLink(title: "Qiita", url: "https://qiita.com/akidon0000")])
+                                        SnsLink(title: "Qiita", url: "https://qiita.com/akidon0000")],
+                                    entryTime: "20240210101310",
+                                    lang: 0)
 }

@@ -17,6 +17,7 @@ extension DateFormatter {
         case onlyHour = "k"          // 17時
         case era = "GG"              // "西暦" (default) or "平成" (本体設定で和暦を指定している場合)
         case weekDay = "EEEE"        // 日曜日
+        case iso8601 = "yyyyMMddHHmmss" // 20170101123922
     }
 
     /*
@@ -30,4 +31,22 @@ extension DateFormatter {
         // optionsは拡張用の引数だが使用されていないため常に0
         dateFormat = DateFormatter.dateFormat(fromTemplate: template.rawValue, options: 0, locale: .current)
     }
+
+
+    /*
+     let dt = Date()
+     // String型へ変換
+     let dateString = DateFormatter.yyyyMMddHHmmss.string(from: dt)
+
+     // DateFormatter.yyyyMMddHHmmssを使用してDate型へ変換
+     if let date = DateFormatter.yyyyMMddHHmmss.date(from: dateString) {
+     */
+    static let yyyyMMddHHmmss: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyyMMddHHmmss"
+        formatter.calendar = Calendar(identifier: .iso8601)
+        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        return formatter
+    }()
 }
