@@ -9,11 +9,14 @@ import UIKit
 
 class StudyRoomViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var collectionView: UICollectionView! 
 
-        // Do any additional setup after loading the view.
-    }
+}
+
+
+
+
+
 
 
 //    @IBAction func button(_ sender: Any) {
@@ -35,4 +38,4 @@ class StudyRoomViewController: UIViewController {
 //            }
 //        }
 //    }
-}
+
