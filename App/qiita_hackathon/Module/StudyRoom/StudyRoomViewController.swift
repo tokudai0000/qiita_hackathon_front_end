@@ -130,7 +130,10 @@ extension StudyRoomViewController: UICollectionViewDelegate, UICollectionViewDat
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("セル番号 \(indexPath.row) がタップされました。")
+        let vc = R.storyboard.accountSettings.accountSettingsViewController()!
+        vc.displayType = .display
+        vc.userData = usersData.users[indexPath.row]
+        self.present(vc, animated: true)
     }
 }
 

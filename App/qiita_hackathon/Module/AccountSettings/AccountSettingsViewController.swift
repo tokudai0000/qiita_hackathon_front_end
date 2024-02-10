@@ -35,8 +35,12 @@ class AccountSettingsViewController: UIViewController {
         configLangButton()
         configSns()
 
+        // TODO: 汚いコード
         if displayType == .display {
             configDisplayMode()
+        }else{
+            // 設定モードの場合のみUserDefaultから読み込んでくる
+            userData = UserDataRepository().fetchUserData()
         }
     }
 
@@ -47,7 +51,6 @@ class AccountSettingsViewController: UIViewController {
     }
     
     private func configDefaults() {
-        userData = UserDataRepository().fetchUserData()
 
         let tapGR: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         tapGR.cancelsTouchesInView = false
