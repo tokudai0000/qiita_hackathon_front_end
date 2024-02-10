@@ -21,13 +21,11 @@ class StudyRoomCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    func setUp(with sample: SampleData) {
-        userImage.image = sample.image
-        drinkLabel.text = sample.drink
-        langLabel.text = sample.lang
-        elapsedTime.text = sample.elapsedTime
 
-
-
-    }
+//    func setUp(with sample: SampleData) {
+//        userImage.image = sample.image
+//        drinkLabel.text = sample.drink
+//        langLabel.text = sample.lang
+//        elapsedTime.text = sample.elapsedTime
+//    }
 }
