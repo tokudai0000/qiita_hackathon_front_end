@@ -22,9 +22,11 @@ class AccountSettingsViewController: UIViewController {
         stackView.axis = .vertical
         stackView.distribution = .equalSpacing
         stackView.alignment = .center
+        stackView.spacing = 10
     }
 
     private func configIconImageView() {
         iconImageView.image = UIImage(systemName: "eraser")
+        iconImageView.backgroundColor = .red
     }
 }
