@@ -7,5 +7,4 @@
 
 struct Entry: Codable {
     let id: String
-    let lang: Int
 }

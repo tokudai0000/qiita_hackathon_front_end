@@ -12,18 +12,18 @@ struct User: Decodable {
     let iconImage: String
     let userName: String
     let companionDrink: Int
-    let programLangs: [ProgramLang]
-    let snsLinks: [SnsLink]
+    let totalTime: String
+    let snsLink: String
     let entryTime: String
     let lang: Int
 
-    init(id: String, iconImage: String, userName: String, companionDrink: Int, programLangs: [ProgramLang], snsLinks: [SnsLink], entryTime: String, lang: Int) {
+    init(id: String, iconImage: String, userName: String, companionDrink: Int, totalTime: String, snsLink: String, entryTime: String, lang: Int) {
         self.id = id
         self.iconImage = iconImage
         self.userName = userName
         self.companionDrink = companionDrink
-        self.programLangs = programLangs
-        self.snsLinks = snsLinks
+        self.totalTime = totalTime
+        self.snsLink = snsLink
         self.entryTime = entryTime
         self.lang = lang
     }
@@ -37,8 +37,8 @@ struct User: Decodable {
               let iconImage = dictionary["iconImage"] as? String,
               let userName = dictionary["userName"] as? String,
               let companionDrink = dictionary["companionDrink"] as? Int,
-              let programLangs = dictionary["programLangs"] as? [ProgramLang],
-              let snsLinks = dictionary["snsLinks"] as? [SnsLink],
+              let totalTime = dictionary["totalTime"] as? String,
+              let snsLink = dictionary["snsLink"] as? String,
               let entryTime = dictionary["entryTime"] as? String,
               let lang = dictionary["lang"] as? Int else {
             throw ParsingError.invalidData
@@ -47,8 +47,8 @@ struct User: Decodable {
         self.iconImage = iconImage
         self.userName = userName
         self.companionDrink = companionDrink
-        self.programLangs = programLangs
-        self.snsLinks = snsLinks
+        self.totalTime = totalTime
+        self.snsLink = snsLink
         self.entryTime = entryTime
         self.lang = lang
     }

@@ -23,12 +23,8 @@ struct Common {
                                     iconImage: "",
                                     userName: "akidon0000",
                                     companionDrink: 0,
-                                    programLangs: [
-                                        ProgramLang(lang: 0, timeMinutes: 59),
-                                        ProgramLang(lang: 1, timeMinutes: 402)],
-                                    snsLinks: [
-                                        SnsLink(title: "GitHub", url: "https://github.com/akidon0000"),
-                                        SnsLink(title: "Qiita", url: "https://qiita.com/akidon0000")],
+                                    totalTime: "001024",
+                                    snsLink: "https://github.com/akidon0000",
                                     entryTime: "20240210101310",
                                     lang: 0)
 
@@ -37,12 +33,8 @@ struct Common {
              iconImage: "",
              userName: "akidon0000",
              companionDrink: 0,
-             programLangs: [
-                ProgramLang(lang: 0, timeMinutes: 59),
-                ProgramLang(lang: 1, timeMinutes: 402)],
-             snsLinks: [
-                SnsLink(title: "GitHub", url: "https://github.com/akidon0000"),
-                SnsLink(title: "Qiita", url: "https://qiita.com/akidon0000")],
+             totalTime: "001024",
+             snsLink: "https://github.com/akidon0000",
              entryTime: "20240210101310",
              lang: 0),
 
@@ -50,12 +42,8 @@ struct Common {
              iconImage: "",
              userName: "hinakko",
              companionDrink: 2,
-             programLangs: [
-                ProgramLang(lang: 0, timeMinutes: 59),
-                ProgramLang(lang: 1, timeMinutes: 402)],
-             snsLinks: [
-                SnsLink(title: "GitHub", url: "https://github.com/akidon0000"),
-                SnsLink(title: "Qiita", url: "https://qiita.com/akidon0000")],
+             totalTime: "010850",
+             snsLink: "https://github.com/hinakko",
              entryTime: "20240210101310",
              lang: 1),
     ]
