@@ -12,19 +12,47 @@
         <!--Item-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="AccountSettingsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="AccountSettingsViewController" customModule="qiita_hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccountSettingsViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="AccountSettingsViewController" customModule="qiita_hackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZLf-3m-HNn">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wY3-VK-Unq">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="ADH-Nc-xd8"/>
+                                            <constraint firstAttribute="width" constant="200" id="jd1-2y-8EG"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8be-R3-RIM">
+                                        <rect key="frame" x="0.0" y="200" width="393" height="510"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ZLf-3m-HNn" secondAttribute="trailing" id="6WW-YB-YPe"/>
+                            <constraint firstItem="ZLf-3m-HNn" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="COq-LC-FV3"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ZLf-3m-HNn" secondAttribute="bottom" id="G1H-Ci-Gy3"/>
+                            <constraint firstItem="ZLf-3m-HNn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="tqr-qQ-39K"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="VcI-48-DtS"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="iconImageView" destination="wY3-VK-Unq" id="J6H-ey-QFe"/>
+                        <outlet property="stackView" destination="ZLf-3m-HNn" id="qDg-yS-afd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="115" y="-34"/>
+            <point key="canvasLocation" x="113.74045801526717" y="-34.507042253521128"/>
         </scene>
     </scenes>
     <resources>
