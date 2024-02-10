@@ -32,6 +32,10 @@ class AccountSettingsViewController: UIViewController {
         configCompanionDrinkButton()
         configLangButton()
         configSns()
+
+        if displayType == .display {
+            configDisplayMode()
+        }
     }
 
     private func configDefaults() {
@@ -63,6 +67,15 @@ class AccountSettingsViewController: UIViewController {
     private func configSns() {
         snsLink.text = userData?.snsLink
         snsLink.textAlignment = .center
+    }
+
+    // TODO: displayType == .settings のBool値をisEnabledに使うことも検討
+    // buttonをisEnabledにして編集拒否はtintのalfa値も変わる
+    private func configDisplayMode() {
+        nameTextFielld.isEnabled = false
+        companionDrinkButton.isEnabled = false
+        langButton.isEnabled = false
+        snsLink.isEnabled = false
     }
 
     @objc func dismissKeyboard() {
