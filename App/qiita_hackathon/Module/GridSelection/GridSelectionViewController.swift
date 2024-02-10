@@ -9,21 +9,50 @@ import UIKit
 
 class GridSelectionViewController: UIViewController {
 
+    @IBOutlet weak var collectionView: UICollectionView! {
+        didSet {
+            collectionView.dataSource = self
+            registerCells()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.collectionViewLayout = {
+            let layout = UICollectionViewCompositionalLayout { (sectionIndex, environment) -> NSCollectionLayoutSection? in
+                let spacing: CGFloat = 8
+                let size: CGFloat = (self.view.bounds.width - spacing) / 2
 
-        // Do any additional setup after loading the view.
+                let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(size), heightDimension: .fractionalHeight(1))
+                let item = NSCollectionLayoutItem(layoutSize: itemSize)
+
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(size))
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+                group.interItemSpacing = .fixed(spacing)
+                let section = NSCollectionLayoutSection(group: group)
+                section.interGroupSpacing = spacing
+                return section
+            }
+            return layout
+        } ()
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func registerCells() {
+        collectionView.register(UINib(nibName: "GridSelectionCell", bundle: nil), forCellWithReuseIdentifier: "GridSelectionCell")
     }
-    */
+}
 
+extension GridSelectionViewController: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 8
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GridSelectionCell", for: indexPath) as? GridSelectionCell else {
+            fatalError()
+        }
+        return cell
+    }
 }

@@ -45,6 +45,10 @@
 		1AD8B3B92B6B78E600C38E9D /* qiita_hackathonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8B3B82B6B78E600C38E9D /* qiita_hackathonUITestsLaunchTests.swift */; };
 		1AF4AEFC2B6BAEE600B3F725 /* SampleAdItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF4AEFB2B6BAEE600B3F725 /* SampleAdItem.swift */; };
 		469B1CB90793352309DBE981 /* Pods_All_qiita_hackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 265090106D418D89CA353673 /* Pods_All_qiita_hackathon.framework */; };
+		5359E4F42B776E3B0030FBBF /* GridSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5359E4F22B776E3B0030FBBF /* GridSelectionCell.swift */; };
+		5359E4F52B776E3B0030FBBF /* GridSelectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5359E4F32B776E3B0030FBBF /* GridSelectionCell.xib */; };
+		5359E4F82B7773720030FBBF /* StudyRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5359E4F62B7773720030FBBF /* StudyRoomCell.swift */; };
+		5359E4F92B7773720030FBBF /* StudyRoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5359E4F72B7773720030FBBF /* StudyRoomCell.xib */; };
 		A92CBF23A4F970838DD6FE0E /* Pods_All_qiita_hackathonUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA06B7B3D5259A88F962E55 /* Pods_All_qiita_hackathonUITests.framework */; };
 		FD0A27CF5F21C4C6F746DB30 /* Pods_qiita_hackathonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A82E8F8E84A8D2DD35C0D9F /* Pods_qiita_hackathonTests.framework */; };
 /* End PBXBuildFile section */
@@ -127,6 +131,10 @@
 		2A82E8F8E84A8D2DD35C0D9F /* Pods_qiita_hackathonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_qiita_hackathonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E326AB5086D59D5E6B4DD1F /* Pods-All-qiita_hackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-All-qiita_hackathon.debug.xcconfig"; path = "Target Support Files/Pods-All-qiita_hackathon/Pods-All-qiita_hackathon.debug.xcconfig"; sourceTree = "<group>"; };
 		3AB23EAAD80825CC687AF4EC /* Pods_All_API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_All_API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5359E4F22B776E3B0030FBBF /* GridSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridSelectionCell.swift; sourceTree = "<group>"; };
+		5359E4F32B776E3B0030FBBF /* GridSelectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridSelectionCell.xib; sourceTree = "<group>"; };
+		5359E4F62B7773720030FBBF /* StudyRoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoomCell.swift; sourceTree = "<group>"; };
+		5359E4F72B7773720030FBBF /* StudyRoomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudyRoomCell.xib; sourceTree = "<group>"; };
 		5F407E9FC8C545605640EDAA /* Pods-qiita_hackathonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qiita_hackathonTests.debug.xcconfig"; path = "Target Support Files/Pods-qiita_hackathonTests/Pods-qiita_hackathonTests.debug.xcconfig"; sourceTree = "<group>"; };
 		82718689DC8ED59D6E91311B /* Pods-qiita_hackathonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qiita_hackathonTests.release.xcconfig"; path = "Target Support Files/Pods-qiita_hackathonTests/Pods-qiita_hackathonTests.release.xcconfig"; sourceTree = "<group>"; };
 		8986658ABF059BCEF37D8A5C /* Pods-qiita_hackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qiita_hackathon.release.xcconfig"; path = "Target Support Files/Pods-qiita_hackathon/Pods-qiita_hackathon.release.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +194,8 @@
 			children = (
 				1A8AC2072B772C3E0027962A /* StudyRoom.storyboard */,
 				1A8AC2092B772C4F0027962A /* StudyRoomViewController.swift */,
+				5359E4F62B7773720030FBBF /* StudyRoomCell.swift */,
+				5359E4F72B7773720030FBBF /* StudyRoomCell.xib */,
 			);
 			path = StudyRoom;
 			sourceTree = "<group>";
@@ -223,6 +233,8 @@
 			children = (
 				1AB7870E2B7733BA00D673E1 /* GridSelection.storyboard */,
 				1AB787102B7733CB00D673E1 /* GridSelectionViewController.swift */,
+				5359E4F32B776E3B0030FBBF /* GridSelectionCell.xib */,
+				5359E4F22B776E3B0030FBBF /* GridSelectionCell.swift */,
 			);
 			path = GridSelection;
 			sourceTree = "<group>";
@@ -488,10 +500,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5359E4F52B776E3B0030FBBF /* GridSelectionCell.xib in Resources */,
 				1A55DB4C2B77260D00C7CCDA /* Main.storyboard in Resources */,
 				1AB787132B77509700D673E1 /* InputField.xib in Resources */,
 				1A8AC20D2B772CBA0027962A /* RankingAndSearch.storyboard in Resources */,
 				1ABA1F522B6E3B9300D0BBA5 /* GoogleService-Info-Template.plist in Resources */,
+				5359E4F92B7773720030FBBF /* StudyRoomCell.xib in Resources */,
 				1A8AC2082B772C3E0027962A /* StudyRoom.storyboard in Resources */,
 				1AD8B3A22B6B78E500C38E9D /* LaunchScreen.storyboard in Resources */,
 				1AB7870F2B7733BA00D673E1 /* GridSelection.storyboard in Resources */,
@@ -647,6 +661,7 @@
 			files = (
 				1AB7872B2B7782B000D673E1 /* UIImageView+Exetnsion.swift in Sources */,
 				1AB787202B776FB900D673E1 /* User.swift in Sources */,
+				5359E4F82B7773720030FBBF /* StudyRoomCell.swift in Sources */,
 				1AB7871E2B775B6000D673E1 /* Common.swift in Sources */,
 				1A1765E62B6BC9A6002DD773 /* SampleAdItemsAPI.swift in Sources */,
 				1A8AC2052B77299D0027962A /* R.generated.swift in Sources */,
@@ -668,6 +683,7 @@
 				1AB7870C2B77320300D673E1 /* AccountDisplayViewController.swift in Sources */,
 				1A8AC20A2B772C4F0027962A /* StudyRoomViewController.swift in Sources */,
 				1A8AC20F2B772CC80027962A /* RankingAndSearchViewController.swift in Sources */,
+				5359E4F42B776E3B0030FBBF /* GridSelectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
