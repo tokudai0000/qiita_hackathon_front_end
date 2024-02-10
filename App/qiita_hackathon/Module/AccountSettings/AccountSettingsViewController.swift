@@ -13,9 +13,8 @@ class AccountSettingsViewController: UIViewController {
     @IBOutlet weak var nameTextFielld: UITextField!
     @IBOutlet weak var companionDrinkButton: UIButton!
     @IBOutlet weak var langButton: UIButton!
-    @IBOutlet weak var sns1: UIStackView!
-    @IBOutlet weak var sns2: UITextField!
-    
+    @IBOutlet weak var snsLink: UITextField!
+
     var userData: User? = Common().sampleUserData
 
     enum DisplayType {
@@ -27,6 +26,7 @@ class AccountSettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configDefaults()
         configIconImageView()
         configNameTextFielld()
         configCompanionDrinkButton()
@@ -34,6 +34,11 @@ class AccountSettingsViewController: UIViewController {
         configSns()
     }
 
+    private func configDefaults() {
+        let tapGR: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tapGR.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tapGR)
+    }
 
     private func configIconImageView() {
         iconImageView.image = UIImage(systemName: "eraser")
@@ -42,16 +47,25 @@ class AccountSettingsViewController: UIViewController {
 
     private func configNameTextFielld() {
         nameTextFielld.text = userData?.userName
+        nameTextFielld.textAlignment = .center
     }
 
     private func configCompanionDrinkButton() {
+        companionDrinkButton.setTitle(userData?.companionDrink.description, for: .normal)
+        companionDrinkButton.tintColor = .black
     }
 
     private func configLangButton() {
+        langButton.setTitle(userData?.lang.description, for: .normal)
+        langButton.tintColor = .black
     }
 
     private func configSns() {
-//        sns1.text = userData?.sns1
-//        sns2.text = userData?.sns2
+        snsLink.text = userData?.snsLink
+        snsLink.textAlignment = .center
+    }
+
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true)
     }
 }

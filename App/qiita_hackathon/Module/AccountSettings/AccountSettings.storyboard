@@ -168,7 +168,7 @@
                         <outlet property="iconImageView" destination="wY3-VK-Unq" id="J6H-ey-QFe"/>
                         <outlet property="langButton" destination="2wg-dQ-xMT" id="7Jq-vy-ce7"/>
                         <outlet property="nameTextFielld" destination="cBU-LH-P4W" id="sVN-Jl-KWx"/>
-                        <outlet property="sns1" destination="gx5-ez-ukc" id="iZH-7X-oUp"/>
+                        <outlet property="snsLink" destination="GzN-kX-bHN" id="A6S-P8-UlF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
