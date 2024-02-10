@@ -22,8 +22,6 @@
 		1AB7870C2B77320300D673E1 /* AccountDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7870B2B77320200D673E1 /* AccountDisplayViewController.swift */; };
 		1AB7870F2B7733BA00D673E1 /* GridSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB7870E2B7733BA00D673E1 /* GridSelection.storyboard */; };
 		1AB787112B7733CB00D673E1 /* GridSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB787102B7733CB00D673E1 /* GridSelectionViewController.swift */; };
-		1AB787132B77509700D673E1 /* InputField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AB787122B77509700D673E1 /* InputField.xib */; };
-		1AB787152B7752EF00D673E1 /* InputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB787142B7752EF00D673E1 /* InputFieldView.swift */; };
 		1AB7871E2B775B6000D673E1 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7871D2B775B6000D673E1 /* Common.swift */; };
 		1AB787202B776FB900D673E1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7871F2B776FB900D673E1 /* User.swift */; };
 		1AB787222B776FE600D673E1 /* SnsLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB787212B776FE600D673E1 /* SnsLink.swift */; };
@@ -100,8 +98,6 @@
 		1AB7870B2B77320200D673E1 /* AccountDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDisplayViewController.swift; sourceTree = "<group>"; };
 		1AB7870E2B7733BA00D673E1 /* GridSelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GridSelection.storyboard; sourceTree = "<group>"; };
 		1AB787102B7733CB00D673E1 /* GridSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridSelectionViewController.swift; sourceTree = "<group>"; };
-		1AB787122B77509700D673E1 /* InputField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputField.xib; sourceTree = "<group>"; };
-		1AB787142B7752EF00D673E1 /* InputFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldView.swift; sourceTree = "<group>"; };
 		1AB7871D2B775B6000D673E1 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		1AB7871F2B776FB900D673E1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1AB787212B776FE600D673E1 /* SnsLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnsLink.swift; sourceTree = "<group>"; };
@@ -212,7 +208,6 @@
 		1A8AC2102B772E1A0027962A /* AccountSettings */ = {
 			isa = PBXGroup;
 			children = (
-				1AB787162B7752F300D673E1 /* InputField */,
 				1A8AC2152B772ECC0027962A /* AccountSettings.storyboard */,
 				1A8AC2172B772EDC0027962A /* AccountSettingsViewController.swift */,
 			);
@@ -237,15 +232,6 @@
 				5359E4F22B776E3B0030FBBF /* GridSelectionCell.swift */,
 			);
 			path = GridSelection;
-			sourceTree = "<group>";
-		};
-		1AB787162B7752F300D673E1 /* InputField */ = {
-			isa = PBXGroup;
-			children = (
-				1AB787122B77509700D673E1 /* InputField.xib */,
-				1AB787142B7752EF00D673E1 /* InputFieldView.swift */,
-			);
-			path = InputField;
 			sourceTree = "<group>";
 		};
 		1AB7872E2B7782C700D673E1 /* AkidonComponents */ = {
@@ -502,7 +488,6 @@
 			files = (
 				5359E4F52B776E3B0030FBBF /* GridSelectionCell.xib in Resources */,
 				1A55DB4C2B77260D00C7CCDA /* Main.storyboard in Resources */,
-				1AB787132B77509700D673E1 /* InputField.xib in Resources */,
 				1A8AC20D2B772CBA0027962A /* RankingAndSearch.storyboard in Resources */,
 				1ABA1F522B6E3B9300D0BBA5 /* GoogleService-Info-Template.plist in Resources */,
 				5359E4F92B7773720030FBBF /* StudyRoomCell.xib in Resources */,
@@ -678,7 +663,6 @@
 				1AB787242B77706900D673E1 /* ProgramLang.swift in Sources */,
 				1AD8B3982B6B78E300C38E9D /* SceneDelegate.swift in Sources */,
 				1AB7872C2B7782B000D673E1 /* DateFormatter+Exetnsion.swift in Sources */,
-				1AB787152B7752EF00D673E1 /* InputFieldView.swift in Sources */,
 				1A8AC2182B772EDC0027962A /* AccountSettingsViewController.swift in Sources */,
 				1AB7870C2B77320300D673E1 /* AccountDisplayViewController.swift in Sources */,
 				1A8AC20A2B772C4F0027962A /* StudyRoomViewController.swift in Sources */,
