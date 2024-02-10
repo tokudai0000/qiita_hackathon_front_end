@@ -17,20 +17,59 @@
                 <rect key="frame" x="0.0" y="0.0" width="180" height="270"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R5X-nN-v1h">
-                        <rect key="frame" x="0.0" y="0.0" width="180" height="128"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R5X-nN-v1h">
+                        <rect key="frame" x="15" y="8" width="150" height="150"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="6gs-MZ-P5j"/>
+                            <constraint firstAttribute="height" constant="150" id="faS-OD-gzo"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9i-on-sN7">
-                        <rect key="frame" x="69" y="235" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="gjv-i9-iLZ">
+                        <rect key="frame" x="0.0" y="168" width="180" height="84.333333333333314"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ユーザーネーム" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqb-wl-SNc">
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="20.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お供" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0F-RK-bwb">
+                                <rect key="frame" x="0.0" y="21.333333333333343" width="180" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="言語" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCG-T8-XRK">
+                                <rect key="frame" x="0.0" y="42.666666666666657" width="180" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="経過時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGx-3k-GQT">
+                                <rect key="frame" x="0.0" y="64" width="180" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="R5X-nN-v1h" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="6dI-f4-58Q"/>
+                <constraint firstItem="R5X-nN-v1h" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="C2V-Dm-tPK"/>
+                <constraint firstItem="gjv-i9-iLZ" firstAttribute="top" secondItem="R5X-nN-v1h" secondAttribute="bottom" constant="10" id="GtR-sN-cfb"/>
+                <constraint firstItem="gjv-i9-iLZ" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="daT-3J-9l0"/>
+                <constraint firstAttribute="trailing" secondItem="gjv-i9-iLZ" secondAttribute="trailing" id="hEY-5H-caj"/>
+                <constraint firstItem="gjv-i9-iLZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="mzZ-W8-FvV"/>
+            </constraints>
+            <connections>
+                <outlet property="drinkLabel" destination="xqb-wl-SNc" id="lxt-AH-T73"/>
+                <outlet property="elapsedTime" destination="lGx-3k-GQT" id="88h-dY-hSO"/>
+                <outlet property="langLabel" destination="lCG-T8-XRK" id="kvA-g6-da4"/>
+                <outlet property="userImage" destination="R5X-nN-v1h" id="fC8-rA-1j3"/>
+            </connections>
             <point key="canvasLocation" x="106.87022900763358" y="20.422535211267608"/>
         </collectionViewCell>
     </objects>
