@@ -21,16 +21,12 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="710"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wY3-VK-Unq">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="710"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="ADH-Nc-xd8"/>
                                             <constraint firstAttribute="width" constant="200" id="jd1-2y-8EG"/>
                                         </constraints>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8be-R3-RIM">
-                                        <rect key="frame" x="0.0" y="200" width="393" height="510"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
