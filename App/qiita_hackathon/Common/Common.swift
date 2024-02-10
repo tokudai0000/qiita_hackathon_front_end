@@ -19,6 +19,9 @@ struct Common {
         return UIImage(data: imageData)
     }
 
+    let iconList = ["Image1", "Image2", "Image3", "Image4", "Image5", "Image6"]
+    let drinkList = ["コーヒー", "エナジードリンク", "紅茶", "お茶", "ジュース", "水"]
+
     let sampleUserData: User = User(id: "uuid0123456789",
                                     iconImage: "",
                                     userName: "akidon0000",
