@@ -31,4 +31,32 @@ class Common {
                                         SnsLink(title: "Qiita", url: "https://qiita.com/akidon0000")],
                                     entryTime: "20240210101310",
                                     lang: 0)
+
+    let sampleUsersData: [User] = [
+        User(id: "uuid0123456789",
+             iconImage: "",
+             userName: "akidon0000",
+             companionDrink: 0,
+             programLangs: [
+                ProgramLang(lang: 0, timeMinutes: 59),
+                ProgramLang(lang: 1, timeMinutes: 402)],
+             snsLinks: [
+                SnsLink(title: "GitHub", url: "https://github.com/akidon0000"),
+                SnsLink(title: "Qiita", url: "https://qiita.com/akidon0000")],
+             entryTime: "20240210101310",
+             lang: 0),
+
+        User(id: "uuidabcdefg",
+             iconImage: "",
+             userName: "hinakko",
+             companionDrink: 2,
+             programLangs: [
+                ProgramLang(lang: 0, timeMinutes: 59),
+                ProgramLang(lang: 1, timeMinutes: 402)],
+             snsLinks: [
+                SnsLink(title: "GitHub", url: "https://github.com/akidon0000"),
+                SnsLink(title: "Qiita", url: "https://qiita.com/akidon0000")],
+             entryTime: "20240210101310",
+             lang: 1),
+    ]
 }
