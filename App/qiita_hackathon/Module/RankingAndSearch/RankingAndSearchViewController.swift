@@ -1,13 +1,13 @@
 //
-//  SubViewController.swift
+//  RankingAndSearchViewController.swift
 //  qiita_hackathon
 //
-//  Created by Akihiro Matsuyama on 2024/02/01.
+//  Created by Akihiro Matsuyama on 2024/02/10.
 //
 
 import UIKit
 
-class SubViewController: UIViewController {
+class RankingAndSearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
