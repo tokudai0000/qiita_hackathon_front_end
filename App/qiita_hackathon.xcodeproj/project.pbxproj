@@ -20,6 +20,7 @@
 		1A8AC2182B772EDC0027962A /* AccountSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8AC2172B772EDC0027962A /* AccountSettingsViewController.swift */; };
 		1A9A83362B77F94E00DEE3F4 /* UserDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9A83352B77F94E00DEE3F4 /* UserDataRepository.swift */; };
 		1A9A83382B78018F00DEE3F4 /* UserPostAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9A83372B78018F00DEE3F4 /* UserPostAPI.swift */; };
+		1A9A833A2B780DB400DEE3F4 /* UsersUpdateGetAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9A83392B780DB400DEE3F4 /* UsersUpdateGetAPI.swift */; };
 		1AB7870A2B7731F400D673E1 /* AccountDisplay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB787092B7731F400D673E1 /* AccountDisplay.storyboard */; };
 		1AB7870C2B77320300D673E1 /* AccountDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7870B2B77320200D673E1 /* AccountDisplayViewController.swift */; };
 		1AB7870F2B7733BA00D673E1 /* GridSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB7870E2B7733BA00D673E1 /* GridSelection.storyboard */; };
@@ -97,6 +98,7 @@
 		1A8AC2172B772EDC0027962A /* AccountSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsViewController.swift; sourceTree = "<group>"; };
 		1A9A83352B77F94E00DEE3F4 /* UserDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataRepository.swift; sourceTree = "<group>"; };
 		1A9A83372B78018F00DEE3F4 /* UserPostAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostAPI.swift; sourceTree = "<group>"; };
+		1A9A83392B780DB400DEE3F4 /* UsersUpdateGetAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersUpdateGetAPI.swift; sourceTree = "<group>"; };
 		1AB787092B7731F400D673E1 /* AccountDisplay.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AccountDisplay.storyboard; sourceTree = "<group>"; };
 		1AB7870B2B77320200D673E1 /* AccountDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDisplayViewController.swift; sourceTree = "<group>"; };
 		1AB7870E2B7733BA00D673E1 /* GridSelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GridSelection.storyboard; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 			children = (
 				1A1765E52B6BC9A6002DD773 /* SampleAdItemsAPI.swift */,
 				1A9A83372B78018F00DEE3F4 /* UserPostAPI.swift */,
+				1A9A83392B780DB400DEE3F4 /* UsersUpdateGetAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -654,6 +657,7 @@
 				1A1765E62B6BC9A6002DD773 /* SampleAdItemsAPI.swift in Sources */,
 				1A8AC2052B77299D0027962A /* R.generated.swift in Sources */,
 				1A1765EA2B6BD3B8002DD773 /* SampleUserDefaults.swift in Sources */,
+				1A9A833A2B780DB400DEE3F4 /* UsersUpdateGetAPI.swift in Sources */,
 				5335D0A12B779A5600DDF4C5 /* SampleData.swift in Sources */,
 				1AF4AEFC2B6BAEE600B3F725 /* SampleAdItem.swift in Sources */,
 				1AD8B3962B6B78E300C38E9D /* AppDelegate.swift in Sources */,

@@ -19,6 +19,9 @@ final class StudyRoomViewController: UIViewController {
 
         configAccessButton()
         configCollectionView()
+
+        // APIを呼び出す
+        usersUpdateGetAPI()
     }
 
     private func configAccessButton() {
@@ -68,6 +71,28 @@ final class StudyRoomViewController: UIViewController {
         layout.itemSize = CGSize(width: width, height: height)
 
         collectionView.collectionViewLayout = layout
+    }
+
+    // usersデータを入れると更新してくれる
+    private func listUpdate(users: Users) {
+        usersData = users
+        collectionView.reloadData()
+    }
+
+    private func usersUpdateGetAPI() {
+        let api = UsersUpdateGetAPI()
+        api.getUsersUpdate { result in // インスタンスを通してメソッドを呼び出す
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let response):
+                    // 受け取ったデータを更新する
+                    self.listUpdate(users: response.users)
+                    print("Usersを取得しました: \(response.users)")
+                case .failure(let error):
+                    print("エラーが発生しました: \(error)")
+                }
+            }
+        }
     }
 
     @objc func buttonTapped(sender : Any) {
