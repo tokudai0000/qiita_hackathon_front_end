@@ -131,8 +131,27 @@ class AccountSettingsViewController: UIViewController {
         // 更新
         userData = newUserData
         UserDataRepository().setUserData(newUserData)
+        postUserAPI()
     }
 
+    private func postUserAPI() {
+        let api = UserPostAPI()
+        guard let user = userData else {
+            AKLog(level: .ERROR, message: "userData")
+            return
+        }
+        api.postUserData(user: user,
+                         completion: { result in // インスタンスを通してメソッドを呼び出す
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let response):
+                    print("UserData登録完了！: \(response)")
+                case .failure(let error):
+                    print("エラーが発生しました: \(error)")
+                }
+            }
+        })
+    }
 
     // TODO: objcは極力使いたくない
     @objc func dismissKeyboard() {
