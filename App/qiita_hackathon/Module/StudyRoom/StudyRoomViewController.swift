@@ -11,12 +11,12 @@ class StudyRoomViewController: UIViewController, UICollectionViewDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
     let button = UIButton()
-    var entryStatus = false
+    var haveStatus = false
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        makeButton()
+        makeEntryButton()
         collectionView.register(UINib(nibName: "StudyRoomCell", bundle: nil), forCellWithReuseIdentifier: "StudyRoomCell")
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -35,7 +35,7 @@ class StudyRoomViewController: UIViewController, UICollectionViewDelegate {
         collectionView.collectionViewLayout = layout
     }
 
-    func makeButton() {
+    func makeEntryButton() {
 
         let screenWidth = self.view.frame.width
         let screenHeight = self.view.frame.height
@@ -63,14 +63,14 @@ class StudyRoomViewController: UIViewController, UICollectionViewDelegate {
     }
 
     @objc  func buttonTapped(sender : Any) {
-        if entryStatus == false {
+        if haveStatus == false {
             button.setTitle("退出", for:UIControl.State.normal)
             button.backgroundColor = UIColor.systemBlue
-            entryStatus = true
+            haveStatus = true
         } else {
             button.setTitle("入室", for:UIControl.State.normal)
             button.backgroundColor = UIColor.systemPink
-            entryStatus = false
+            haveStatus = false
         }
     }
 }
