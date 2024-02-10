@@ -63,13 +63,14 @@ class AccountSettingsViewController: UIViewController {
         iconImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapped)))
 
         // Base64からUIImageに変換
-        guard let base64 = userData?.iconImage,
-              let image = Common().convertBase64ToImage(base64) else {
-            iconImageView.image = UIImage(systemName: "eraser")
-            return
-        }
-        iconImageView.image = image
-        updateUserData(iconImage: base64)
+        // API保留
+//        guard let base64 = userData?.iconImage,
+//              let image = Common().convertBase64ToImage(base64) else {
+//            iconImageView.image = UIImage(systemName: "eraser")
+//            return
+//        }
+        iconImageView.image = UIImage(named: userData?.iconImage ?? "")
+        updateUserData(iconImage: userData?.iconImage)
     }
 
     private func configNameTextFielld() {

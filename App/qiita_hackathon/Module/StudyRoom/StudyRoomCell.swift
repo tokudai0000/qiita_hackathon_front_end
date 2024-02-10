@@ -29,6 +29,11 @@ class StudyRoomCell: UICollectionViewCell {
         userNameLabel.text = user.userName
         drinkLabel.text = user.companionDrink.description
         langLabel.text = user.lang.description
-        elapsedTime.text = user.totalTime
+
+        if let date = DateFormatter.HHmmss.date(from: user.totalTime) {
+            let dateFormatter = DateFormatter()
+            dateFormatter.setTemplate(.time)
+            elapsedTime.text = dateFormatter.string(from: date).description
+        }
     }
 }
