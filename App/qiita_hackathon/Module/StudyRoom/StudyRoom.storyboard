@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Study Room View Controller-->
+        <!--Item-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="StudyRoomViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="StudyRoomViewController" customModule="qiita_hackathon" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,6 +31,8 @@
                             <constraint firstItem="HXI-Yw-tjN" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="f0v-n0-Oa5"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="f8F-Q5-tBu"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
