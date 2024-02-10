@@ -9,11 +9,11 @@ struct User: Decodable {
     let id: String
     let iconImage: String
     let userName: String
-    let companionDrink: String
+    let companionDrink: Int
     let programLangs: [ProgramLang]
     let snsLinks: [SnsLink]
 
-    init(id: String, iconImage: String, userName: String, companionDrink: String, programLangs: [ProgramLang], snsLinks: [SnsLink]) {
+    init(id: String, iconImage: String, userName: String, companionDrink: Int, programLangs: [ProgramLang], snsLinks: [SnsLink]) {
         self.id = id
         self.iconImage = iconImage
         self.userName = userName
@@ -30,7 +30,7 @@ struct User: Decodable {
         guard let id = dictionary["id"] as? String,
               let iconImage = dictionary["iconImage"] as? String,
               let userName = dictionary["userName"] as? String,
-              let companionDrink = dictionary["companionDrink"] as? String,
+              let companionDrink = dictionary["companionDrink"] as? Int,
               let programLangs = dictionary["programLangs"] as? [ProgramLang],
               let snsLinks = dictionary["snsLinks"] as? [SnsLink] else {
             throw ParsingError.invalidData
