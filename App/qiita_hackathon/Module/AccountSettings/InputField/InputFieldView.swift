@@ -18,9 +18,9 @@ class InputFieldView: UIView, UITextFieldDelegate {
         textField.delegate = self
     }
 
-    func textFieldDidChangeSelection(_ textField: UITextField) {
-        delegate?.textFieldDidChange(text: textField.text ?? "")
-    }
+//    func textFieldDidChangeSelection(_ textField: UITextField) {
+//        delegate?.textFieldDidChange(text: textField.text ?? "")
+//    }
     
 //    override init(frame: CGRect) {
 //        super.init(frame: frame)
