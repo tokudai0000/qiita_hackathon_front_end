@@ -95,6 +95,21 @@ final class StudyRoomViewController: UIViewController {
         }
     }
 
+    private func userJoinPostAPI() {
+        let api = UserJoinPostAPI()
+        api.postUserJoin(id: "akidon00001") { result in // インスタンスを通してメソッドを呼び出す
+            DispatchQueue.main.async {
+                switch result {
+                case .success(_):
+                    // 受け取ったデータを更新する
+                    print("打刻しました:")
+                case .failure(let error):
+                    print("エラーが発生しました: \(error)")
+                }
+            }
+        }
+    }
+
     @objc func buttonTapped(sender : Any) {
         // isInRoom(部屋にいる状態)の時にボタンが押されると退出とみなす
         if isInRoom {
@@ -102,8 +117,10 @@ final class StudyRoomViewController: UIViewController {
             accessButton.setTitle("入室", for:UIControl.State.normal)
             accessButton.backgroundColor = UIColor.systemPink
         } else {
+            userJoinPostAPI()
             accessButton.setTitle("退出", for:UIControl.State.normal)
             accessButton.backgroundColor = UIColor.systemBlue
+
         }
 
         isInRoom = !isInRoom
