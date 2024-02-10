@@ -53,6 +53,10 @@ class AccountSettingsViewController: UIViewController {
     }
 
     private func configIconImageView() {
+        // タップ検知
+        iconImageView.isUserInteractionEnabled = true
+        iconImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapped)))
+
         // Base64からUIImageに変換
         guard let base64 = userData?.iconImage,
               let image = Common().convertBase64ToImage(base64) else {
@@ -89,7 +93,49 @@ class AccountSettingsViewController: UIViewController {
         langButton.isHidden = true
     }
 
+    // TODO: objcは極力使いたくない
     @objc func dismissKeyboard() {
         self.view.endEditing(true)
+    }
+
+    @objc func tapped() {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            let pickerView = UIImagePickerController()
+            pickerView.sourceType = .photoLibrary
+            pickerView.delegate = self
+            self.present(pickerView, animated: true)
+        }
+    }
+}
+
+extension AccountSettingsViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.originalImage] as! UIImage // 選択された画像を取得
+        guard let user = userData,
+              let base64 = Common().convertImageToBase64(image) else {
+            let alert = UIAlertController(title: "保存に失敗しました", message: nil, preferredStyle: .alert)
+            // UIAlertActionを作成
+            let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                // アクションボタンがタップされたときの処理
+            }
+            // UIAlertActionをUIAlertControllerに追加
+            alert.addAction(okAction)
+            // UIAlertControllerを表示
+            self.present(alert, animated: true, completion: nil)
+            self.dismiss(animated: true)
+            return
+        }
+        iconImageView.image = image
+
+        let newUserData = User(id: user.id,
+                               iconImage: base64,
+                               userName: user.userName,
+                               companionDrink: user.companionDrink,
+                               totalTime: user.totalTime,
+                               snsLink: user.snsLink,
+                               entryTime: user.entryTime,
+                               lang: user.lang)
+        userData = newUserData
+        self.dismiss(animated: true)
     }
 }
