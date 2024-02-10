@@ -10,7 +10,10 @@ import UIKit
 class AccountSettingsViewController: UIViewController {
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var iconImageView: UIImageView!
-    
+
+    var userData: User? = nil
+//    User(id: "UUID", iconImage: <#T##String#>, userName: <#T##String#>, companionDrink: <#T##String#>, programLangs: <#T##[ProgramLang]#>, snsLinks: <#T##[SnsLink]#>)
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

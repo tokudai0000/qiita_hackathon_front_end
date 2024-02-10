@@ -27,6 +27,7 @@
 		1AB787182B77550700D673E1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB787172B77550700D673E1 /* User.swift */; };
 		1AB7871A2B77562D00D673E1 /* ProgramLang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB787192B77562D00D673E1 /* ProgramLang.swift */; };
 		1AB7871C2B7756CB00D673E1 /* SnsLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7871B2B7756CB00D673E1 /* SnsLink.swift */; };
+		1AB7871E2B775B6000D673E1 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7871D2B775B6000D673E1 /* Common.swift */; };
 		1ABA1F522B6E3B9300D0BBA5 /* GoogleService-Info-Template.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1ABA1F502B6E3B9300D0BBA5 /* GoogleService-Info-Template.plist */; };
 		1ABA1F532B6E3B9300D0BBA5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1ABA1F512B6E3B9300D0BBA5 /* GoogleService-Info.plist */; };
 		1AD8B3962B6B78E300C38E9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8B3952B6B78E300C38E9D /* AppDelegate.swift */; };
@@ -94,6 +95,7 @@
 		1AB787172B77550700D673E1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1AB787192B77562D00D673E1 /* ProgramLang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramLang.swift; sourceTree = "<group>"; };
 		1AB7871B2B7756CB00D673E1 /* SnsLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnsLink.swift; sourceTree = "<group>"; };
+		1AB7871D2B775B6000D673E1 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		1ABA1F502B6E3B9300D0BBA5 /* GoogleService-Info-Template.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info-Template.plist"; sourceTree = SOURCE_ROOT; };
 		1ABA1F512B6E3B9300D0BBA5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		1AD8B3922B6B78E300C38E9D /* qiita_hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qiita_hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -285,6 +287,7 @@
 		1AD8B3E32B6B86CC00C38E9D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				1AB7871D2B775B6000D673E1 /* Common.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -630,6 +633,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AB7871E2B775B6000D673E1 /* Common.swift in Sources */,
 				1A1765E62B6BC9A6002DD773 /* SampleAdItemsAPI.swift in Sources */,
 				1A8AC2052B77299D0027962A /* R.generated.swift in Sources */,
 				1A1765EA2B6BD3B8002DD773 /* SampleUserDefaults.swift in Sources */,

@@ -19,25 +19,25 @@ struct User: Decodable {
         self.userName = userName
         self.companionDrink = companionDrink
         self.programLangs = programLangs
-        self.programLangs = programLangs
+        self.snsLinks = snsLinks
     }
 
-    enum ParsingError: Error {
-        case invalidData
-    }
-
-    init(dictionary: [String: Any]) throws {
-        guard let id = dictionary["id"] as? Int,
-              let clientName = dictionary["clientName"] as? String,
-              let imageUrlStr = dictionary["imageUrlStr"] as? String,
-              let targetUrlStr = dictionary["targetUrlStr"] as? String,
-              let imageDescription = dictionary["imageDescription"] as? String else {
-            throw ParsingError.invalidData
-        }
-        self.id = id
-        self.clientName = clientName
-        self.imageUrlStr = imageUrlStr
-        self.targetUrlStr = targetUrlStr
-        self.imageDescription = imageDescription
-    }
+//    enum ParsingError: Error {
+//        case invalidData
+//    }
+//
+//    init(dictionary: [String: Any]) throws {
+//        guard let id = dictionary["id"] as? Int,
+//              let clientName = dictionary["clientName"] as? String,
+//              let imageUrlStr = dictionary["imageUrlStr"] as? String,
+//              let targetUrlStr = dictionary["targetUrlStr"] as? String,
+//              let imageDescription = dictionary["imageDescription"] as? String else {
+//            throw ParsingError.invalidData
+//        }
+//        self.id = id
+//        self.clientName = clientName
+//        self.imageUrlStr = imageUrlStr
+//        self.targetUrlStr = targetUrlStr
+//        self.imageDescription = imageDescription
+//    }
 }
