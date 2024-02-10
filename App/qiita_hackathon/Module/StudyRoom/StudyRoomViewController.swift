@@ -21,7 +21,8 @@ final class StudyRoomViewController: UIViewController {
         configCollectionView()
 
         // APIを呼び出す
-        usersUpdateGetAPI()
+        // API保留
+//        usersUpdateGetAPI()
     }
 
     private func configAccessButton() {
@@ -130,11 +131,13 @@ final class StudyRoomViewController: UIViewController {
         // isInRoom(部屋にいる状態)の時にボタンが押されると退出とみなす
         if isInRoom {
             // 退出処理(入室を受け付ける表示に変更する)
-            userLeavePostAPI(requestID: userId)
+            // API保留
+//            userLeavePostAPI(requestID: userId)
             accessButton.setTitle("入室", for:UIControl.State.normal)
             accessButton.backgroundColor = UIColor.systemPink
         } else {
-            userJoinPostAPI(requestID: userId)
+            // API保留
+//            userJoinPostAPI(requestID: userId)
             accessButton.setTitle("退出", for:UIControl.State.normal)
             accessButton.backgroundColor = UIColor.systemBlue
 

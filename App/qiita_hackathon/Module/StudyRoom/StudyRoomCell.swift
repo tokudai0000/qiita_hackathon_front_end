@@ -20,9 +20,12 @@ class StudyRoomCell: UICollectionViewCell {
     }
 
     func setUp(with user: User) {
-        if let image = Common().convertBase64ToImage(user.iconImage) {
-            userImage.image = image
-        }
+        // API保留
+//        if let image = Common().convertBase64ToImage(user.iconImage) {
+//            userImage.image = image
+//        }
+        userImage.image = UIImage(named: user.iconImage)
+
         userNameLabel.text = user.userName
         drinkLabel.text = user.companionDrink.description
         langLabel.text = user.lang.description
