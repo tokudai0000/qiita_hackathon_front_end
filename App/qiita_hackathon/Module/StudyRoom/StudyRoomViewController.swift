@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class StudyRoomViewController: UIViewController, UICollectionViewDelegate {
+final class StudyRoomViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     private let accessButton = UIButton()
@@ -84,7 +84,7 @@ final class StudyRoomViewController: UIViewController, UICollectionViewDelegate 
     }
 }
 
-extension StudyRoomViewController: UICollectionViewDataSource {
+extension StudyRoomViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -93,13 +93,17 @@ extension StudyRoomViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StudyRoomCell", for: indexPath) as! StudyRoomCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.studyRoomCell, for: indexPath)!
         cell.setUp(with: sample[indexPath.row])
         cell.backgroundColor = UIColor.brown
         cell.layer.borderColor = UIColor.brown.cgColor
         cell.layer.borderWidth = 3.0
         cell.layer.cornerRadius = 8.0
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("セル番号 \(indexPath.row) がタップされました。")
     }
 }
 
