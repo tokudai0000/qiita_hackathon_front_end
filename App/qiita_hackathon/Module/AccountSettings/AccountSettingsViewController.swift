@@ -28,22 +28,20 @@ class AccountSettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        configUserInit()
-
+        // TODO: 汚いコード
+        if displayType == .display {
+            configDisplayMode()
+        }else{
+            configUserInit()
+            // 設定モードの場合のみUserDefaultから読み込んでくる
+            userData = UserDataRepository().fetchUserData()
+        }
         configDefaults()
         configIconImageView()
         configNameTextFielld()
         configCompanionDrinkButton()
         configLangButton()
         configSns()
-
-        // TODO: 汚いコード
-        if displayType == .display {
-            configDisplayMode()
-        }else{
-            // 設定モードの場合のみUserDefaultから読み込んでくる
-            userData = UserDataRepository().fetchUserData()
-        }
     }
 
     @IBAction func companionDrinkButton(_ sender: Any) {
@@ -150,9 +148,11 @@ class AccountSettingsViewController: UIViewController {
                                entryTime: finalEntryTime ?? "",
                                lang: finalLang ?? 0)
 
-        // 更新
-        userData = newUserData
-        UserDataRepository().setUserData(newUserData)
+        if displayType == .settings {
+            // 更新
+            userData = newUserData
+            UserDataRepository().setUserData(newUserData)
+        }
 //        postUserAPI()
     }
 

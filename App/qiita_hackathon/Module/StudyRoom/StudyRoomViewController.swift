@@ -131,11 +131,21 @@ final class StudyRoomViewController: UIViewController {
         // isInRoom(部屋にいる状態)の時にボタンが押されると退出とみなす
         if isInRoom {
             // 退出処理(入室を受け付ける表示に変更する)
+            var usersList = usersData.users
+            if !usersList.isEmpty {
+                usersList.removeFirst() // 配列の先頭の要素を削除
+                usersData = Users(users: usersList)
+            }
             // API保留
 //            userLeavePostAPI(requestID: userId)
             accessButton.setTitle("入室", for:UIControl.State.normal)
             accessButton.backgroundColor = UIColor.systemPink
         } else {
+            var usersList = usersData.users
+            var user = UserDataRepository().fetchUserData()
+            usersList.insert(UserDataRepository().fetchUserData(), at: 0)
+            usersData = Users(users: usersList)
+
             // API保留
 //            userJoinPostAPI(requestID: userId)
             accessButton.setTitle("退出", for:UIControl.State.normal)
@@ -143,6 +153,7 @@ final class StudyRoomViewController: UIViewController {
 
         }
 
+        collectionView.reloadData()
         isInRoom = !isInRoom
     }
 }
@@ -170,6 +181,8 @@ extension StudyRoomViewController: UICollectionViewDelegate, UICollectionViewDat
         let vc = R.storyboard.accountSettings.accountSettingsViewController()!
         vc.displayType = .display
         vc.userData = usersData.users[indexPath.row]
+        print(indexPath.row)
+        print(usersData.users)
         self.present(vc, animated: true)
     }
 }

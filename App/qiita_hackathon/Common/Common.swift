@@ -20,7 +20,7 @@ struct Common {
     }
 
     let sampleUserData: User = User(id: "uuid0123456789",
-                                    iconImage: "",
+                                    iconImage: "Image1",
                                     userName: "akidon0000",
                                     companionDrink: 0,
                                     totalTime: "001024",
@@ -30,7 +30,7 @@ struct Common {
 
     let sampleUsersData: Users = Users(users:[
         User(id: "uuid0123456789",
-             iconImage: "",
+             iconImage: "Image1",
              userName: "akidon0000",
              companionDrink: 0,
              totalTime: "001024",
@@ -39,7 +39,7 @@ struct Common {
              lang: 0),
 
         User(id: "uuidabcdefg",
-             iconImage: "",
+             iconImage: "Image2",
              userName: "hinakko",
              companionDrink: 2,
              totalTime: "010850",
@@ -47,4 +47,7 @@ struct Common {
              entryTime: "20240210101310",
              lang: 1),
     ])
+
+    let companionDrinkList = ["コーラ","お酒","お茶",""]
+
 }
