@@ -28,7 +28,7 @@ struct Common {
                                     entryTime: "20240210101310",
                                     lang: 0)
 
-    let sampleUsersData: [User] = [
+    let sampleUsersData: Users = Users(users:[
         User(id: "uuid0123456789",
              iconImage: "",
              userName: "akidon0000",
@@ -46,5 +46,5 @@ struct Common {
              snsLink: "https://github.com/hinakko",
              entryTime: "20240210101310",
              lang: 1),
-    ]
+    ])
 }

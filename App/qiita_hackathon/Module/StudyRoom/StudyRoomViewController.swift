@@ -11,7 +11,8 @@ final class StudyRoomViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     private let accessButton = UIButton()
-    private var isInRoom = false
+    private var isInRoom: Bool = false
+    private var usersData: Users = Common().sampleUsersData
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,12 +90,13 @@ extension StudyRoomViewController: UICollectionViewDelegate, UICollectionViewDat
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return sample.count
+        return usersData.users.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.studyRoomCell, for: indexPath)!
-        cell.setUp(with: sample[indexPath.row])
+        let userData = usersData.users[indexPath.row]
+        cell.setUp(with: userData)
         cell.backgroundColor = UIColor.brown
         cell.layer.borderColor = UIColor.brown.cgColor
         cell.layer.borderWidth = 3.0
