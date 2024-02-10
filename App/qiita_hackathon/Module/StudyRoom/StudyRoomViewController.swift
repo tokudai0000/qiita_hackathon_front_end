@@ -7,71 +7,80 @@
 
 import UIKit
 
-class StudyRoomViewController: UIViewController, UICollectionViewDelegate {
+final class StudyRoomViewController: UIViewController, UICollectionViewDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    let button = UIButton()
-    var haveStatus = false
-
+    private let accessButton = UIButton()
+    private var isInRoom = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        makeEntryButton()
-        collectionView.register(UINib(nibName: "StudyRoomCell", bundle: nil), forCellWithReuseIdentifier: "StudyRoomCell")
-        collectionView.dataSource = self
+
+        configAccessButton()
+        configCollectionView()
+    }
+
+    private func configAccessButton() {
+        accessButton.setTitle("入室", for:UIControl.State.normal)
+        accessButton.titleLabel?.font =  UIFont.systemFont(ofSize: 20)
+        accessButton.backgroundColor = UIColor.systemPink
+        accessButton.layer.cornerRadius = 12
+
+        // タップ処理
+        accessButton.addTarget(self,
+                               action: #selector(StudyRoomViewController.buttonTapped(sender:)),
+                               for: .touchUpInside)
+
+        self.view.addSubview(accessButton)
+
+        // レイアウト
+        accessButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            // 横幅を親ビューの1/4に設定
+            accessButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.25),
+            // 高さを70に設定
+            accessButton.heightAnchor.constraint(equalToConstant: 70),
+            // 右部から-15のオートレイアウト
+            accessButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
+            // 下部から(タブバー10pt, accessButtonの高さ70pt, 空白15pt)のオートレイアウト
+            accessButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -95)
+        ])
+    }
+
+    private func configCollectionView() {
+        collectionView.register(UINib(resource: R.nib.studyRoomCell),
+                                forCellWithReuseIdentifier: R.reuseIdentifier.studyRoomCell.identifier)
+
         collectionView.delegate = self
-        collectionView.collectionViewLayout = UICollectionViewFlowLayout()
+        collectionView.dataSource = self
         collectionView.backgroundColor = UIColor(red: 26/255, green:93/255, blue: 26/255, alpha: 1)
-        //セルの大きさを変更する
+
+        // セルの大きさを変更する
         let layout = UICollectionViewFlowLayout()
-        //行間の余白
-        layout.minimumLineSpacing = 30
+        layout.minimumLineSpacing = 30 // 行間の余白
         layout.sectionInset = UIEdgeInsets(top: 30, left: 5, bottom: 30, right: 5)
-        guard let window = UIApplication.shared.connectedScenes.first as? UIWindowScene else { return }
-        //画面サイズ-40
-        let width = (window.screen.bounds.width - 20) / 2
+
+        // サイズ
+        let bounds = UIScreen.main.bounds
+        let width = (bounds.width - 20) / 2 // 画面サイズ-40
         let height = width * 1.5
         layout.itemSize = CGSize(width: width, height: height)
+
         collectionView.collectionViewLayout = layout
     }
 
-    func makeEntryButton() {
-
-        let screenWidth = self.view.frame.width
-        let screenHeight = self.view.frame.height
-        // 位置とサイズ
-        button.frame = CGRect(x:screenWidth - 150, y:screenHeight - 150,
-                              width:screenWidth/4, height:60)
-        // タイトル
-        button.setTitle("入室", for:UIControl.State.normal)
-
-        // フォントサイズ
-        button.titleLabel?.font =  UIFont.systemFont(ofSize: 20)
-
-        // 背景色
-        button.backgroundColor = UIColor.systemPink
-        // タップされたときの処理
-        button.addTarget(self,
-                         action: #selector(StudyRoomViewController.buttonTapped(sender:)),
-                         for: .touchUpInside)
-        button.layer.cornerRadius = 12
-        button.translatesAutoresizingMaskIntoConstraints = false
-        // Viewにボタンを追加
-        self.view.addSubview(button)
-        button.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-    }
-
-    @objc  func buttonTapped(sender : Any) {
-        if haveStatus == false {
-            button.setTitle("退出", for:UIControl.State.normal)
-            button.backgroundColor = UIColor.systemBlue
-            haveStatus = true
+    @objc func buttonTapped(sender : Any) {
+        // isInRoom(部屋にいる状態)の時にボタンが押されると退出とみなす
+        if isInRoom {
+            // 退出処理(入室を受け付ける表示に変更する)
+            accessButton.setTitle("入室", for:UIControl.State.normal)
+            accessButton.backgroundColor = UIColor.systemPink
         } else {
-            button.setTitle("入室", for:UIControl.State.normal)
-            button.backgroundColor = UIColor.systemPink
-            haveStatus = false
+            accessButton.setTitle("退出", for:UIControl.State.normal)
+            accessButton.backgroundColor = UIColor.systemBlue
         }
+
+        isInRoom = !isInRoom
     }
 }
 
@@ -94,17 +103,13 @@ extension StudyRoomViewController: UICollectionViewDataSource {
     }
 }
 
+
+
 //extension StudyRoomViewController: UICollectionViewDelegateFlowLayout {
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 //        return CGSize(width: 180, height: 270)
 //    }
 //}
-
-
-
-
-
-
 
 //    @IBAction func button(_ sender: Any) {
 //        // storyboardにてStoryboardIDを設定、Use StoryboardIDにチェックをいれ、1度Buildすること
@@ -125,4 +130,3 @@ extension StudyRoomViewController: UICollectionViewDataSource {
 //            }
 //        }
 //    }
-
