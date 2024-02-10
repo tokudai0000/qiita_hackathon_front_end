@@ -17,7 +17,7 @@ class AccountSettingsViewController: UIViewController {
     @IBOutlet weak var langButton: UIButton!
     @IBOutlet weak var snsLink: UITextField!
 
-    var userData: User? = Common().sampleUserData
+    var userData: User?
 
     enum DisplayType {
         case settings
@@ -27,6 +27,8 @@ class AccountSettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        configUserInit()
 
         configDefaults()
         configIconImageView()
@@ -49,7 +51,21 @@ class AccountSettingsViewController: UIViewController {
     
     @IBAction func langButton(_ sender: Any) {
     }
-    
+
+    private func configUserInit() {
+        userData = UserDataRepository().fetchUserData()
+
+        if userData != nil {
+            return
+        }
+        // userのデータがない時のみ
+        let id = UUID().uuidString
+        let imageNumber = Int.random(in: 1 ... 3)
+        let image = "Image\(imageNumber)"
+
+        updateUserData(id: id, iconImage: image)
+    }
+
     private func configDefaults() {
 
         let tapGR: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
@@ -59,8 +75,9 @@ class AccountSettingsViewController: UIViewController {
 
     private func configIconImageView() {
         // タップ検知
-        iconImageView.isUserInteractionEnabled = true
-        iconImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapped)))
+        // API保留
+//        iconImageView.isUserInteractionEnabled = true
+//        iconImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapped)))
 
         // Base64からUIImageに変換
         // API保留
@@ -70,7 +87,8 @@ class AccountSettingsViewController: UIViewController {
 //            return
 //        }
         iconImageView.image = UIImage(named: userData?.iconImage ?? "")
-        updateUserData(iconImage: userData?.iconImage)
+//        updateUserData(iconImage: userData?.iconImage)
+        updateUserData(iconImage: "Image3")
     }
 
     private func configNameTextFielld() {
@@ -110,27 +128,27 @@ class AccountSettingsViewController: UIViewController {
                                 snsLink: String? = nil,
                                 entryTime: String? = nil,
                                 lang: Int? = nil) {
-        guard let user = userData else {
-            AKLog(level: .ERROR, message: "updateUserData失敗")
-            return
-        }
-        let finalId = id ?? user.id
-        let finalIconImage = iconImage ?? user.iconImage
-        let finalUserName = userName ?? user.userName
-        let finalCompanionDrink = companionDrink ?? user.companionDrink
-        let finalTotalTime = totalTime ?? user.totalTime
-        let finalSnsLink = snsLink ?? user.snsLink
-        let finalEntryTime = entryTime ?? user.entryTime
-        let finalLang = lang ?? user.lang
+//        guard let user = userData else {
+//            AKLog(level: .ERROR, message: "updateUserData失敗")
+//            return
+//        }
+        let finalId = id ?? userData?.id
+        let finalIconImage = iconImage ?? userData?.iconImage
+        let finalUserName = userName ?? userData?.userName
+        let finalCompanionDrink = companionDrink ?? userData?.companionDrink
+        let finalTotalTime = totalTime ?? userData?.totalTime
+        let finalSnsLink = snsLink ?? userData?.snsLink
+        let finalEntryTime = entryTime ?? userData?.entryTime
+        let finalLang = lang ?? userData?.lang
 
-        let newUserData = User(id: finalId,
-                               iconImage: finalIconImage,
-                               userName: finalUserName,
-                               companionDrink: finalCompanionDrink,
-                               totalTime: finalTotalTime,
-                               snsLink: finalSnsLink,
-                               entryTime: finalEntryTime,
-                               lang: finalLang)
+        let newUserData = User(id: finalId ?? "",
+                               iconImage: finalIconImage ?? "",
+                               userName: finalUserName ?? "",
+                               companionDrink: finalCompanionDrink ?? 0,
+                               totalTime: finalTotalTime ?? "",
+                               snsLink: finalSnsLink ?? "",
+                               entryTime: finalEntryTime ?? "",
+                               lang: finalLang ?? 0)
 
         // 更新
         userData = newUserData
