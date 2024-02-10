@@ -16,9 +16,23 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Mj-cF-jv0">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    </imageView>
+                </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <point key="canvasLocation" x="139" y="20"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="1Mj-cF-jv0" secondAttribute="trailing" id="6z8-uq-Mj6"/>
+                <constraint firstAttribute="bottom" secondItem="1Mj-cF-jv0" secondAttribute="bottom" id="FmS-x8-At6"/>
+                <constraint firstItem="1Mj-cF-jv0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="LjA-yM-wmr"/>
+                <constraint firstItem="1Mj-cF-jv0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="zWv-pX-nge"/>
+            </constraints>
+            <connections>
+                <outlet property="selectedIcon" destination="1Mj-cF-jv0" id="fbj-ZU-DV6"/>
+            </connections>
+            <point key="canvasLocation" x="138.93129770992365" y="19.718309859154932"/>
         </collectionViewCell>
     </objects>
 </document>
