@@ -11,7 +11,9 @@ class AccountSettingsViewController: UIViewController {
     @IBOutlet weak var iconImageView: UIImageView!
     // TODO: 再利用できる
     @IBOutlet weak var nameTextFielld: UITextField!
+    @IBOutlet weak var companionDrinkLabel: UILabel!
     @IBOutlet weak var companionDrinkButton: UIButton!
+    @IBOutlet weak var langLabel: UILabel!
     @IBOutlet weak var langButton: UIButton!
     @IBOutlet weak var snsLink: UITextField!
 
@@ -51,31 +53,29 @@ class AccountSettingsViewController: UIViewController {
 
     private func configNameTextFielld() {
         nameTextFielld.text = userData?.userName
-        nameTextFielld.textAlignment = .center
     }
 
     private func configCompanionDrinkButton() {
-        companionDrinkButton.setTitle(userData?.companionDrink.description, for: .normal)
-        companionDrinkButton.tintColor = .black
+        companionDrinkLabel.text = userData?.companionDrink.description
     }
 
     private func configLangButton() {
-        langButton.setTitle(userData?.lang.description, for: .normal)
-        langButton.tintColor = .black
+        langLabel.text = userData?.lang.description
     }
 
     private func configSns() {
         snsLink.text = userData?.snsLink
-        snsLink.textAlignment = .center
     }
 
     // TODO: displayType == .settings のBool値をisEnabledに使うことも検討
     // buttonをisEnabledにして編集拒否はtintのalfa値も変わる
     private func configDisplayMode() {
         nameTextFielld.isEnabled = false
-        companionDrinkButton.isEnabled = false
-        langButton.isEnabled = false
+        nameTextFielld.backgroundColor = .none
         snsLink.isEnabled = false
+        snsLink.backgroundColor = .none
+        companionDrinkButton.isHidden = true
+        langButton.isHidden = true
     }
 
     @objc func dismissKeyboard() {
