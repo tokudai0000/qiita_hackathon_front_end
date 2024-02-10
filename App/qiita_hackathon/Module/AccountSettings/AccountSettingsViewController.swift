@@ -40,6 +40,12 @@ class AccountSettingsViewController: UIViewController {
         }
     }
 
+    @IBAction func companionDrinkButton(_ sender: Any) {
+    }
+    
+    @IBAction func langButton(_ sender: Any) {
+    }
+    
     private func configDefaults() {
         let tapGR: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         tapGR.cancelsTouchesInView = false
@@ -47,8 +53,13 @@ class AccountSettingsViewController: UIViewController {
     }
 
     private func configIconImageView() {
-        iconImageView.image = UIImage(systemName: "eraser")
-        iconImageView.backgroundColor = .red
+        // Base64からUIImageに変換
+        guard let base64 = userData?.iconImage,
+              let image = Common().convertBase64ToImage(base64) else {
+            iconImageView.image = UIImage(systemName: "eraser")
+            return
+        }
+        iconImageView.image = image
     }
 
     private func configNameTextFielld() {
