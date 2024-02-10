@@ -131,7 +131,7 @@ class AccountSettingsViewController: UIViewController {
         // 更新
         userData = newUserData
         UserDataRepository().setUserData(newUserData)
-        postUserAPI()
+//        postUserAPI()
     }
 
     private func postUserAPI() {
