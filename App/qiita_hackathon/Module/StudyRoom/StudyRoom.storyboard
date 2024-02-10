@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vHx-Fr-FOf">
-                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <rect key="frame" x="0.0" y="99" width="393" height="670"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Oqy-KU-AXw">
                                     <size key="itemSize" width="128" height="128"/>
@@ -28,14 +28,33 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fz9-gu-6Vf">
+                                <rect key="frame" x="0.0" y="59" width="393" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="自習室" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJM-Ei-5Ui">
+                                        <rect key="frame" x="175" y="8" width="48" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="akq-Nz-kgl"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vHx-Fr-FOf" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="2ny-9Z-L4h"/>
+                            <constraint firstItem="vHx-Fr-FOf" firstAttribute="top" secondItem="fz9-gu-6Vf" secondAttribute="bottom" id="8Wr-6A-Q7E"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fz9-gu-6Vf" secondAttribute="trailing" id="JRH-kh-cuU"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="vHx-Fr-FOf" secondAttribute="trailing" id="Nxq-jv-h0Z"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="vHx-Fr-FOf" secondAttribute="bottom" id="SvA-g1-tza"/>
+                            <constraint firstItem="fz9-gu-6Vf" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="tbB-a4-cAr"/>
                             <constraint firstItem="vHx-Fr-FOf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="v9y-vQ-zyj"/>
+                            <constraint firstItem="fz9-gu-6Vf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="vgE-OH-naQ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="f8F-Q5-tBu"/>
@@ -46,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="115" y="-34"/>
+            <point key="canvasLocation" x="113.74045801526717" y="-34.507042253521128"/>
         </scene>
     </scenes>
     <resources>
