@@ -25,7 +25,7 @@ struct Common {
 
     let sampleUserData: User = User(id: "uuid0123456789",
                                     iconImage: "Image1",
-                                    userName: "akidon0000",
+                                    userName: "akidon",
                                     companionDrink: 0,
                                     totalTime: "001024",
                                     snsLink: "https://github.com/akidon0000",
@@ -35,7 +35,7 @@ struct Common {
     let sampleUsersData: Users = Users(users:[
         User(id: "uuid0123456789",
              iconImage: "Image1",
-             userName: "akidon0000",
+             userName: "akidon",
              companionDrink: 0,
              totalTime: "001024",
              snsLink: "https://github.com/akidon0000",

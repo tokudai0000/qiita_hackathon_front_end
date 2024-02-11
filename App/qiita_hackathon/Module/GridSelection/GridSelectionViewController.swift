@@ -60,9 +60,10 @@ extension GridSelectionViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = R.storyboard.accountSettings.accountSettingsViewController()!
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
+//        let vc = R.storyboard.accountSettings.accountSettingsViewController()!
 //        vc.displayType = .display
 //        vc.userData = usersData.users[indexPath.row]
-        self.present(vc, animated: true)
+//        self.present(vc, animated: true)
     }
 }
