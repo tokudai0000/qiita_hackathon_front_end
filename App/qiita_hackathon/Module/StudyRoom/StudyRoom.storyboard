@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--自習室-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="StudyRoomViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="StudyRoomViewController" customModule="qiita_hackathon" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,29 +17,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StudyRoomViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXI-Yw-tjN">
-                                <rect key="frame" x="96.666666666666686" y="415.66666666666669" width="200" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vHx-Fr-FOf">
+                                <rect key="frame" x="0.0" y="99" width="393" height="670"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Oqy-KU-AXw">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fz9-gu-6Vf">
+                                <rect key="frame" x="0.0" y="59" width="393" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="自習室" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJM-Ei-5Ui">
+                                        <rect key="frame" x="175" y="8" width="48" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="akq-Nz-kgl"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="HXI-Yw-tjN" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="2lI-ow-WYJ"/>
-                            <constraint firstItem="HXI-Yw-tjN" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="f0v-n0-Oa5"/>
+                            <constraint firstItem="vHx-Fr-FOf" firstAttribute="top" secondItem="fz9-gu-6Vf" secondAttribute="bottom" id="8Wr-6A-Q7E"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fz9-gu-6Vf" secondAttribute="trailing" id="JRH-kh-cuU"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="vHx-Fr-FOf" secondAttribute="trailing" id="Nxq-jv-h0Z"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="vHx-Fr-FOf" secondAttribute="bottom" id="SvA-g1-tza"/>
+                            <constraint firstItem="fz9-gu-6Vf" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="tbB-a4-cAr"/>
+                            <constraint firstItem="vHx-Fr-FOf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="v9y-vQ-zyj"/>
+                            <constraint firstItem="fz9-gu-6Vf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="vgE-OH-naQ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="f8F-Q5-tBu"/>
+                    <tabBarItem key="tabBarItem" title="自習室" image="person.3.fill" selectedImage="person.3.fill" catalog="system" id="f8F-Q5-tBu"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="vHx-Fr-FOf" id="J3z-ql-E9r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="115" y="-34"/>
+            <point key="canvasLocation" x="113.74045801526717" y="-34.507042253521128"/>
         </scene>
     </scenes>
     <resources>
+        <image name="person.3.fill" width="128" height="128"/>
+        <image name="person.3.fill" catalog="system" width="128" height="66"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

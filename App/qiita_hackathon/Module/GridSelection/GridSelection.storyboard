@@ -12,17 +12,47 @@
         <!--Grid Selection View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="GridSelectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="GridSelectionViewController" customModule="qiita_hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GridSelection" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="GridSelectionViewController" customModule="qiita_hackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ekG-kC-WT8">
+                                <rect key="frame" x="0.0" y="95" width="393" height="723"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XEQ-Pp-4ZR">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下記の画像からアイコン画像を選んでね！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3RE-eu-sHu">
+                                <rect key="frame" x="45" y="74" width="303" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3RE-eu-sHu" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="15" id="1ex-jj-RBo"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ekG-kC-WT8" secondAttribute="trailing" id="ClX-85-0Hb"/>
+                            <constraint firstItem="3RE-eu-sHu" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Te9-Lk-OFo"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ekG-kC-WT8" secondAttribute="bottom" id="VTO-F2-UXT"/>
+                            <constraint firstItem="ekG-kC-WT8" firstAttribute="top" secondItem="3RE-eu-sHu" secondAttribute="bottom" id="tSn-1R-sIT"/>
+                            <constraint firstItem="ekG-kC-WT8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="uHF-Xx-2hV"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="ekG-kC-WT8" id="qlf-YN-ZYp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="115" y="-34"/>
+            <point key="canvasLocation" x="374.80916030534348" y="-68.309859154929583"/>
         </scene>
     </scenes>
     <resources>

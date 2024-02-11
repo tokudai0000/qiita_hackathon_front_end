@@ -18,23 +18,12 @@
                     </tabBar>
                     <connections>
                         <segue destination="d2w-io-Lef" kind="relationship" relationship="viewControllers" id="BOz-5o-zLU"/>
-                        <segue destination="0KP-ef-Cyd" kind="relationship" relationship="viewControllers" id="nSr-WA-Tg9"/>
                         <segue destination="vub-vX-ePW" kind="relationship" relationship="viewControllers" id="j3z-91-4Kp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZjI-fC-36z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="364" y="-400"/>
-        </scene>
-        <!--RankingAndSearch-->
-        <scene sceneID="f86-nP-ZcL">
-            <objects>
-                <viewControllerPlaceholder storyboardName="RankingAndSearch" id="0KP-ef-Cyd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="CN7-5P-0qt"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FqM-VG-G8b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="87" y="25"/>
         </scene>
         <!--StudyRoom-->
         <scene sceneID="heV-Lm-mu3">
