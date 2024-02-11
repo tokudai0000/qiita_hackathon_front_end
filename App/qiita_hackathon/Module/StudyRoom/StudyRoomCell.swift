@@ -27,8 +27,8 @@ class StudyRoomCell: UICollectionViewCell {
         userImage.image = UIImage(named: user.iconImage)
 
         userNameLabel.text = user.userName
-        drinkLabel.text = Common().drinkList[user.companionDrink]
-        langLabel.text = Common().langList[user.lang]
+        drinkLabel.text = user.companionDrink
+        langLabel.text = user.lang
 
 
         if let date = DateFormatter.HHmmss.date(from: user.totalTime) {

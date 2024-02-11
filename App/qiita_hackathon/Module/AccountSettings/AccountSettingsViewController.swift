@@ -112,13 +112,15 @@ class AccountSettingsViewController: UIViewController {
 
     private func configCompanionDrinkButton() {
         if let userData {
-            companionDrinkLabel.text = Common().drinkList[userData.companionDrink]
+            companionDrinkLabel.text = "コーヒー"
+//            companionDrinkLabel.text = userData.companionDrink
         }
     }
 
     private func configLangButton() {
         if let userData {
-            langLabel.text = Common().langList[userData.lang]
+            langLabel.text = "Go言語"
+//            langLabel.text = userData.lang
         }
     }
 
