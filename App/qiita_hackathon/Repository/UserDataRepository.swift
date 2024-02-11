@@ -37,8 +37,8 @@ public final class UserDataRepository: UserDataRepositoryInterface {
     }
 
     private let KEY_companionDrink = "KEY_companionDrink"
-    private var companionDrink: Int {
-        get { return userDefaults.integer(forKey: KEY_companionDrink)}
+    private var companionDrink: String {
+        get { return userDefaults.string(forKey: KEY_companionDrink) ?? "" }
         set(v) { userDefaults.set(v ,forKey: KEY_companionDrink) }
     }
 
@@ -61,8 +61,8 @@ public final class UserDataRepository: UserDataRepositoryInterface {
     }
 
     private let KEY_lang = "KEY_lang"
-    private var lang: Int {
-        get { return userDefaults.integer(forKey: KEY_lang)}
+    private var lang: String {
+        get { return userDefaults.string(forKey: KEY_lang) ?? "" }
         set(v) { userDefaults.set(v ,forKey: KEY_lang) }
     }
 
