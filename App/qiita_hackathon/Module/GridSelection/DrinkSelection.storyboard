@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--おとも選択-->
+        <scene sceneID="WS5-m5-3Wj">
+            <objects>
+                <viewController storyboardIdentifier="DrinkSelection" id="VTd-hr-GoB" customClass="DrinkViewController" customModule="qiita_hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TR3-eq-ATF">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mSA-sR-LDb">
+                                <rect key="frame" x="0.0" y="127" width="393" height="691"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EQQ-CI-d0D">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="おともにしているドリンクを選択してね！" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxp-ug-FlX">
+                                <rect key="frame" x="18.666666666666657" y="103" width="355.66666666666674" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="B6p-g7-PrY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="B6p-g7-PrY" firstAttribute="trailing" secondItem="mSA-sR-LDb" secondAttribute="trailing" id="3nU-Tp-Zsa"/>
+                            <constraint firstItem="mxp-ug-FlX" firstAttribute="top" secondItem="B6p-g7-PrY" secondAttribute="top" id="8er-Hy-3CB"/>
+                            <constraint firstItem="mxp-ug-FlX" firstAttribute="centerX" secondItem="TR3-eq-ATF" secondAttribute="centerX" id="Yuc-h0-irr"/>
+                            <constraint firstItem="mSA-sR-LDb" firstAttribute="leading" secondItem="B6p-g7-PrY" secondAttribute="leading" id="oym-B1-1wu"/>
+                            <constraint firstItem="mSA-sR-LDb" firstAttribute="top" secondItem="mxp-ug-FlX" secondAttribute="bottom" id="t4H-1y-pQu"/>
+                            <constraint firstItem="B6p-g7-PrY" firstAttribute="bottom" secondItem="mSA-sR-LDb" secondAttribute="bottom" id="wbh-Ut-lue"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="おとも選択" id="U1P-d5-cwa">
+                        <barButtonItem key="leftBarButtonItem" title="戻る" id="UVC-W4-IIi">
+                            <connections>
+                                <action selector="didCancel:" destination="VTd-hr-GoB" id="ILf-3G-7Od"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="wRS-9y-J4t">
+                            <connections>
+                                <action selector="didTapSave:" destination="VTd-hr-GoB" id="3y2-8b-07p"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="mSA-sR-LDb" id="Ijp-ay-Kb5"/>
+                        <outlet property="selectedDrink" destination="mxp-ug-FlX" id="i33-yW-AY8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eJU-pf-PcQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1063.3587786259541" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="t6X-ZP-LO3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CoX-PU-1Qh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fcc-4Y-HLj">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VTd-hr-GoB" kind="relationship" relationship="rootViewController" id="1b3-Cs-jqS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yL3-dg-m1v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.64122137404578" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
