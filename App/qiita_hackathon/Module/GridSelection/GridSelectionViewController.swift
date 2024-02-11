@@ -27,7 +27,6 @@ class GridSelectionViewController: UIViewController, UICollectionViewDelegate {
 
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.backgroundColor = UIColor(red: 26/255, green:93/255, blue: 26/255, alpha: 1)
 
         // セルの大きさを変更する
         let layout = UICollectionViewFlowLayout()
@@ -61,9 +60,9 @@ extension GridSelectionViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let vc = R.storyboard.accountSettings.accountSettingsViewController()!
+        let vc = R.storyboard.accountSettings.accountSettingsViewController()!
 //        vc.displayType = .display
 //        vc.userData = usersData.users[indexPath.row]
-//        self.present(vc, animated: true)
+        self.present(vc, animated: true)
     }
 }

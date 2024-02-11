@@ -16,6 +16,8 @@ class AccountSettingsViewController: UIViewController {
     @IBOutlet weak var langLabel: UILabel!
     @IBOutlet weak var langButton: UIButton!
     @IBOutlet weak var snsLink: UITextField!
+    
+
 
     var userData: User?
 
@@ -25,6 +27,12 @@ class AccountSettingsViewController: UIViewController {
     }
     var displayType: DisplayType = .settings
 
+//    var lang = ""
+//
+//    override func viewWillAppear(_ animated: Bool) {
+//        print(lang)
+//    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,8 +41,6 @@ class AccountSettingsViewController: UIViewController {
             configDisplayMode()
         }else{
             configUserInit()
-            // 設定モードの場合のみUserDefaultから読み込んでくる
-            userData = UserDataRepository().fetchUserData()
         }
         configDefaults()
         configIconImageView()
@@ -45,9 +51,19 @@ class AccountSettingsViewController: UIViewController {
     }
 
     @IBAction func companionDrinkButton(_ sender: Any) {
+        let DrinkVC = UIStoryboard(name: "DrinkSelection", bundle: nil).instantiateViewController(withIdentifier: "DrinkSelection") as! DrinkViewController
+
+        let navigationController = UINavigationController(rootViewController: DrinkVC)
+        navigationController.modalPresentationStyle = .fullScreen
+        present(navigationController, animated: true)
     }
     
     @IBAction func langButton(_ sender: Any) {
+        let LangSelectionVC = UIStoryboard(name: "LangSelection", bundle: nil).instantiateViewController(withIdentifier: "LangSelection") as! LangSelectionViewController
+
+        let navigationController = UINavigationController(rootViewController: LangSelectionVC)
+        navigationController.modalPresentationStyle = .fullScreen
+        present(navigationController, animated: true)
     }
 
     private func configUserInit() {
@@ -180,14 +196,20 @@ class AccountSettingsViewController: UIViewController {
         self.view.endEditing(true)
     }
 
-    @objc func tapped() {
-        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-            let pickerView = UIImagePickerController()
-            pickerView.sourceType = .photoLibrary
-            pickerView.delegate = self
-            self.present(pickerView, animated: true)
-        }
+    @IBAction func didTapIconSelect(_ sender: Any) {
+        let GridVC = UIStoryboard(name: "GridSelection", bundle: nil).instantiateViewController(withIdentifier: "GridSelection") as! GridSelectionViewController
+
+        GridVC.modalPresentationStyle = .formSheet
+            present(GridVC, animated: true, completion: nil)
     }
+    //    @objc func tapped() {
+//        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+//            let pickerView = UIImagePickerController()
+//            pickerView.sourceType = .photoLibrary
+//            pickerView.delegate = self
+//            self.present(pickerView, animated: true)
+//        }
+//    }
 }
 
 extension AccountSettingsViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
