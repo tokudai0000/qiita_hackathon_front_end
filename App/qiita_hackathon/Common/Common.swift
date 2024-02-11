@@ -21,10 +21,11 @@ struct Common {
 
     let iconList = ["Image1", "Image2", "Image3", "Image4", "Image5", "Image6"]
     let drinkList = ["コーヒー", "エナジードリンク", "紅茶", "お茶", "ジュース", "水"]
+    let langList = ["Swift", "Kotlin", "Flutter", "C言語", "Python", "Go言語", "PHP", "R言語"]
 
     let sampleUserData: User = User(id: "uuid0123456789",
                                     iconImage: "Image1",
-                                    userName: "akidon0000",
+                                    userName: "akidon",
                                     companionDrink: 0,
                                     totalTime: "001024",
                                     snsLink: "https://github.com/akidon0000",
@@ -34,7 +35,7 @@ struct Common {
     let sampleUsersData: Users = Users(users:[
         User(id: "uuid0123456789",
              iconImage: "Image1",
-             userName: "akidon0000",
+             userName: "akidon",
              companionDrink: 0,
              totalTime: "001024",
              snsLink: "https://github.com/akidon0000",

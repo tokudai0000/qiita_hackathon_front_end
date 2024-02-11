@@ -25,12 +25,6 @@ final class StudyRoomViewController: UIViewController {
 //        usersUpdateGetAPI()
     }
 
-    @IBAction func tappedTest(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "GridSelection", bundle: nil)
-            let GridSelectionVC = storyboard.instantiateViewController(withIdentifier: "GridSelection")
-        GridSelectionVC.modalPresentationStyle = .formSheet
-            present(GridSelectionVC, animated: true, completion: nil)
-    }
     private func configAccessButton() {
         accessButton.setTitle("入室", for:UIControl.State.normal)
         accessButton.titleLabel?.font =  UIFont.systemFont(ofSize: 20)

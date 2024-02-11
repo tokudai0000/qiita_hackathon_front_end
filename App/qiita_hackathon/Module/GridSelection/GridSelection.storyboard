@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ekG-kC-WT8">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="95" width="393" height="723"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XEQ-Pp-4ZR">
                                     <size key="itemSize" width="128" height="128"/>
@@ -28,13 +28,21 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下記の画像からアイコン画像を選んでね！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3RE-eu-sHu">
+                                <rect key="frame" x="45" y="74" width="303" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ekG-kC-WT8" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="5Xh-bt-UHh"/>
+                            <constraint firstItem="3RE-eu-sHu" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="15" id="1ex-jj-RBo"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ekG-kC-WT8" secondAttribute="trailing" id="ClX-85-0Hb"/>
+                            <constraint firstItem="3RE-eu-sHu" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Te9-Lk-OFo"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ekG-kC-WT8" secondAttribute="bottom" id="VTO-F2-UXT"/>
+                            <constraint firstItem="ekG-kC-WT8" firstAttribute="top" secondItem="3RE-eu-sHu" secondAttribute="bottom" id="tSn-1R-sIT"/>
                             <constraint firstItem="ekG-kC-WT8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="uHF-Xx-2hV"/>
                         </constraints>
                     </view>
@@ -44,7 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="375" y="-68"/>
+            <point key="canvasLocation" x="374.80916030534348" y="-68.309859154929583"/>
         </scene>
     </scenes>
     <resources>
