@@ -37,7 +37,7 @@ struct Common {
              iconImage: "Image1",
              userName: "akidon",
              companionDrink: 0,
-             totalTime: "001024",
+             totalTime: "000000",
              snsLink: "https://github.com/akidon0000",
              entryTime: "20240210101310",
              lang: 0),

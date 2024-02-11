@@ -74,7 +74,7 @@ class AccountSettingsViewController: UIViewController {
         }
         // userのデータがない時のみ
         let id = UUID().uuidString
-        let imageNumber = Int.random(in: 1 ... 3)
+        let imageNumber = Int.random(in: 1 ... 6)
         let image = "Image\(imageNumber)"
 
         updateUserData(id: id, iconImage: image)
@@ -111,11 +111,15 @@ class AccountSettingsViewController: UIViewController {
     }
 
     private func configCompanionDrinkButton() {
-        companionDrinkLabel.text = userData?.companionDrink.description
+        if let userData {
+            companionDrinkLabel.text = Common().drinkList[userData.companionDrink]
+        }
     }
 
     private func configLangButton() {
-        langLabel.text = userData?.lang.description
+        if let userData {
+            langLabel.text = Common().langList[userData.lang]
+        }
     }
 
     private func configSns() {
