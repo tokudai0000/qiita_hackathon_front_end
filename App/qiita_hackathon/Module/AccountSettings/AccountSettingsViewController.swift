@@ -141,11 +141,11 @@ class AccountSettingsViewController: UIViewController {
     private func updateUserData(id: String? = nil,
                                 iconImage: String? = nil,
                                 userName: String? = nil,
-                                companionDrink: Int? = nil,
+                                companionDrink: String? = nil,
                                 totalTime: String? = nil,
                                 snsLink: String? = nil,
                                 entryTime: String? = nil,
-                                lang: Int? = nil) {
+                                lang: String? = nil) {
 //        guard let user = userData else {
 //            AKLog(level: .ERROR, message: "updateUserData失敗")
 //            return
@@ -162,11 +162,11 @@ class AccountSettingsViewController: UIViewController {
         let newUserData = User(id: finalId ?? "",
                                iconImage: finalIconImage ?? "",
                                userName: finalUserName ?? "",
-                               companionDrink: finalCompanionDrink ?? 0,
+                               companionDrink: finalCompanionDrink ?? "",
                                totalTime: finalTotalTime ?? "",
                                snsLink: finalSnsLink ?? "",
                                entryTime: finalEntryTime ?? "",
-                               lang: finalLang ?? 0)
+                               lang: finalLang ?? "")
 
         if displayType == .settings {
             // 更新

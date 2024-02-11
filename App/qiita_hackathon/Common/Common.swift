@@ -26,32 +26,40 @@ struct Common {
     let sampleUserData: User = User(id: "uuid0123456789",
                                     iconImage: "Image1",
                                     userName: "akidon",
-                                    companionDrink: 0,
+                                    companionDrink: "ジュース",
                                     totalTime: "001024",
                                     snsLink: "https://github.com/akidon0000",
                                     entryTime: "20240210101310",
-                                    lang: 0)
+                                    lang: "Swift")
 
     let sampleUsersData: Users = Users(users:[
         User(id: "uuid0123456789",
              iconImage: "Image1",
              userName: "akidon",
-             companionDrink: 0,
-             totalTime: "000000",
+             companionDrink: "ジュース",
+             totalTime: "001024",
              snsLink: "https://github.com/akidon0000",
              entryTime: "20240210101310",
-             lang: 0),
+             lang: "Swift"),
 
-        User(id: "uuidabcdefg",
+        User(id: "uuid057859000",
              iconImage: "Image2",
-             userName: "hinakko",
-             companionDrink: 2,
-             totalTime: "010850",
-             snsLink: "https://github.com/hinakko",
+             userName: "Hika",
+             companionDrink: "紅茶",
+             totalTime: "001024",
+             snsLink: "https://github.com/akidon0000",
              entryTime: "20240210101310",
-             lang: 1),
+             lang: "Python"),
+        User(id: "uuid3246678",
+             iconImage: "Image4",
+             userName: "horry",
+             companionDrink: "コーヒー",
+             totalTime: "001024",
+             snsLink: "https://github.com/akidon0000",
+             entryTime: "20240210101310",
+             lang: "Python")
     ])
 
-    let companionDrinkList = ["コーラ","お酒","お茶",""]
+    
 
 }

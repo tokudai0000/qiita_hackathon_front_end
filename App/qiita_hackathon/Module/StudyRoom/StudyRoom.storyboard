@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--自習室-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="StudyRoomViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="StudyRoomViewController" customModule="qiita_hackathon" customModuleProvider="target" sceneMemberID="viewController">
@@ -57,7 +57,7 @@
                             <constraint firstItem="fz9-gu-6Vf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="vgE-OH-naQ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="f8F-Q5-tBu"/>
+                    <tabBarItem key="tabBarItem" title="自習室" image="person.3.fill" selectedImage="person.3.fill" catalog="system" id="f8F-Q5-tBu"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="vHx-Fr-FOf" id="J3z-ql-E9r"/>
@@ -69,6 +69,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="person.3.fill" width="128" height="128"/>
+        <image name="person.3.fill" catalog="system" width="128" height="66"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
